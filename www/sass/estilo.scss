@@ -26,11 +26,13 @@ body {
 
   @media screen and (max-width: $break-mb)
   {
+    width:100%;
     background: #000000;
     max-width: 480px;
   }
   @media screen and (max-width: $break-dt)
   {
+    width:100%;
     background: #FFFFFF;
     max-width: 1280px;
   }
@@ -41,8 +43,16 @@ body {
 }
 
 #logo {
-  margin:0;
-  padding:0;
+
+}
+
+.logo-desktop {
+  margin: 2em 0 0.5em 2em;
+}
+
+.logo-mobile  {
+  text-align: center;
+  margin: 1em 2em 1em 0;
 }
 
 

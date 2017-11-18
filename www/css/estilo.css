@@ -19,16 +19,21 @@ body {
   font-family: AvantGardeStd; }
   @media screen and (max-width: 480px) {
     body {
+      width: 100%;
       background: #000000;
       max-width: 480px; } }
   @media screen and (max-width: 1920px) {
     body {
+      width: 100%;
       background: #FFFFFF;
       max-width: 1280px; } }
 
-#logo {
-  margin: 0;
-  padding: 0; }
+.logo-desktop {
+  margin: 2em 0 0.5em 2em; }
+
+.logo-mobile {
+  text-align: center;
+  margin: 1em 2em 1em 0; }
 
 footer {
   text-align: center;

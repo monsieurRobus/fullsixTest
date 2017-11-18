@@ -6,13 +6,15 @@
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- ESTILOS CSS -->
         <link href="css/estilo.css" rel="stylesheet" />
+        <!-- SCRIPTS EXTERNOS -->
+        <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
   </head>
   <!-- MAQUETACION HTML PROCURANDO SEGUIR ESTÁNDARES HTML5 DE W3C -->
   <body>
       <header>
 
         <div id="logo">
-          <img src="./../img/"
+
         </div>
         <nav>
 
@@ -42,4 +44,71 @@
         </adress>
       </footer>
   </body>
+  <script>
+    var anchoDesktop = 480;   // Ancho a partir del cual cambiamos de mobile a Desktop
+
+    // Una vez el documento esté preparado, procedemos a realizar la carga de página correspondiente.
+
+    $(document).ready(function(){
+
+      var anchoVentana = window.innerWidth;
+      var divLogo = document.getElementById("logo");
+
+      // LOGO
+      // En función del ancho de ventana cargará la imagen que corresponda en el div del logo,
+      // dependiendo de si entramos desde mobile o desktop.
+
+      // 1. Desktop
+      if (anchoVentana >= anchoDesktop) {
+
+        $(divLogo).html('<img alt="Logo Eroski" src="./img/desktop/logo-eroski.png" />');
+        $(divLogo).addClass('logo-desktop');   // Asignamos la clase correspondiente a la imagen
+
+      }
+      // 2. Mobile
+      else {
+        $(divLogo).html('<img alt="Logo Eroski Mobile" src="./img/mobile/logo-eroski-mobile.png" />');
+        $(divLogo).addClass('logo-mobile');
+      }
+
+    });
+
+
+    // RESIZE
+    // Esta función se encarga de realizar los cambios pertinentes en la página una vez se detecta
+    // el paso de una resolución a otra.
+    // Se ha procurado que solo se ejecute el código una vez
+    var cambioResolucion = function(){
+
+      //
+      var anchoVentana = window.innerWidth;
+      var divLogo = document.getElementById("logo");
+
+
+      // 1. Mobile - Desktop
+      if (anchoVentana >= anchoDesktop) {
+
+        // LOGO
+        $(divLogo).html('<img alt="Logo Eroski" src="./img/desktop/logo-eroski.png" />');
+          if ($(divLogo).hasClass('logo-mobile'))
+          {
+            $(divLogo).html('<img alt="Logo Eroski" src="./img/desktop/logo-eroski.png" />');
+            $(divLogo).addClass('logo-desktop').removeClass('logo-mobile');   // Asignamos la clase correspondiente a la imagen
+          }
+        }
+
+      // 2. Desktop - Mobile
+      else {
+
+        // LOGO
+        if ($(divLogo).hasClass('logo-desktop'))
+        {
+          $(divLogo).html('<img alt="Logo Eroski Mobile" src="./img/mobile/logo-eroski-mobile.png" />');
+          $(divLogo).addClass('logo-mobile').removeClass('logo-desktop');   // Asignamos la clase correspondiente a la imagen
+        }
+      }
+    };    //
+    $(window).resize(cambioResolucion);
+
+  </script>
 </html>
