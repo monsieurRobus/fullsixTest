@@ -1,51 +1,94 @@
+// CARGA DE VARIABLES
 // VARIABLES RESPONSIVE
-$break-sm: 320px;
-$break-md: 640px;
-$break-lg: 1200px;
+$break-mb: 480px;
+$break-dt: 1920px;
 
-// VARIABLES FUENTE
-// TAMAÑOS POR SECCION
-$fontsize-slider-title:         40px;
-$fontsize-slider-links:         18px;
-$fontsize-slider-carrusel:      12px;
-$fontsize-cintillo-detalle:     16px;
-$fontsize-cintillo-link:        18px;
-$fontsize-destacados-title:     32px;
-$fontsize-destacados-detalle:   24px;
-$fontsize-sticky-title:         34px;
-$fontsize-sticky-sub:           18px;
-$fontsize-sticky-detalle:       15px;
-$fontsize-sticky-link:          84px;
-$fontsize-footer-tlf:           18px;
-$fontsize-footer-detalle:       14px;
+// VARIABLES FUENTES
+@import "tamaniofuentes";
+
+// MIXINS
+// CARGA DE TIPOGRAFÍAS
+@mixin tipografia($nombretipo,$file,$peso) {
+
+  @font-face {
+    font-family: #{$nombretipo};
+    src: url("../font/"+$file) format("opentype");
+    font-weight: #{$peso};
+  }
+}
+
+@include tipografia('AvantGardeStd','ITCAvantGardeStd-Bk.otf','100');
+@include tipografia('AvantGardeStd','ITCAvantGardeStd-Md.otf','200');
+@include tipografia('AvantGardeStd','ITCAvantGardeStd-Demi.otf','300');
+@include tipografia('AvantGardeStd','ITCAvantGardeStd-Bold.otf','400');
+
+body {
+
+  @media screen and (max-width: $break-mb)
+  {
+    background: #000000;
+    max-width: 480px;
+  }
+  @media screen and (max-width: $break-dt)
+  {
+    background: #FFFFFF;
+    max-width: 1280px;
+  }
+
+  margin:auto;
+  font-family: AvantGardeStd;
+
+}
+
+#logo {
+  margin:0;
+  padding:0;
+}
+
+
+footer {
+
+  text-align: center;
+  color: #ffffff;
+  background: #d50011;
+
+  adress
+  {
+    display: block;
+    padding: 1em 0 2em 0;
+  }
+
+    .footer-telefono {
+      display:block;
+      padding: 0.5em;
+      font-weight: 400;
+      font-size: $fontsize-footer-tlf;
+    }
+    .footer-horario {
+      display:block;
+      padding: 0.2em;
+      font-weight: 300;
+      font-size: $fontsize-footer-detalle;
+    }
+
+
+}
 
 
 
 // PRUEBAS
-footer {
-
-
-    span {
-
-    }
-
-}
-
-h1 {
-  color: #aaffee;
-  @media screen and (max-width: $break-lg)
-  {
-    background: #ffff23;
-  }
-  @media screen and (max-width: $break-md)
-  {
-    background: #ffaa00;
-  }
-  @media screen and (max-width: $break-sm)
-  {
-    background: #ff3aFF;
-  }
-
-
-
-}
+// h1 {
+//   color: #aaffee;
+//   @media screen and (max-width: $break-lg)
+//   {
+//     background: #ffff23;
+//   }
+//   @media screen and (max-width: $break-md)
+//   {
+//     background: #ffaa00;
+//   }
+//   @media screen and (max-width: $break-sm)
+//   {
+//     background: #ff3aFF;
+//   }
+//}
