@@ -1,56 +1,59 @@
-@font-face {
-  font-family: AvantGardeStd;
-  src: url("../font/ITCAvantGardeStd-Bk.otf") format("opentype");
-  font-weight: 100; }
-@font-face {
-  font-family: AvantGardeStd;
-  src: url("../font/ITCAvantGardeStd-Md.otf") format("opentype");
-  font-weight: 200; }
-@font-face {
-  font-family: AvantGardeStd;
-  src: url("../font/ITCAvantGardeStd-Demi.otf") format("opentype");
-  font-weight: 300; }
-@font-face {
-  font-family: AvantGardeStd;
-  src: url("../font/ITCAvantGardeStd-Bold.otf") format("opentype");
-  font-weight: 400; }
-body {
-  margin: auto;
-  font-family: AvantGardeStd; }
-  @media screen and (max-width: 480px) {
-    body {
-      width: 100%;
-      background: #000000;
-      max-width: 480px; } }
-  @media screen and (max-width: 1920px) {
-    body {
-      width: 100%;
-      background: #FFFFFF;
-      max-width: 1280px; } }
+/*
+Error: Invalid CSS after "    max-height": expected ";", was ":100%;"
+        on line 71 of sass/estilo.scss
 
-.logo-desktop {
-  margin: 2em 0 0.5em 2em; }
+66:     border-top: 1px solid black;
+67:   }
+68:   
+69:   img {
+70:     max-width: 100%
+71:     max-height:100%;
+72:   }
+73: 
+74: 
+75: }
+76: 
 
-.logo-mobile {
-  text-align: center;
-  margin: 1em 2em 1em 0; }
-
-footer {
-  text-align: center;
-  color: #ffffff;
-  background: #d50011; }
-  footer adress {
-    display: block;
-    padding: 1em 0 2em 0; }
-  footer .footer-telefono {
-    display: block;
-    padding: 0.5em;
-    font-weight: 400;
-    font-size: 18px; }
-  footer .footer-horario {
-    display: block;
-    padding: 0.2em;
-    font-weight: 300;
-    font-size: 14px; }
-
-/*# sourceMappingURL=estilo.css.map */
+Backtrace:
+sass/estilo.scss:71
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1278:in `expected'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1208:in `expected'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1203:in `tok!'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:804:in `block in try_declaration'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1254:in `rethrow'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:809:in `try_declaration'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:732:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:697:in `block_child'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:686:in `block_contents'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:678:in `block'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:697:in `block_child'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:689:in `block_contents'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:678:in `block'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:670:in `ruleset'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:696:in `block_child'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:689:in `block_contents'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:137:in `stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:41:in `parse'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:414:in `_to_tree'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
+/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:320:in `block in watch'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
+/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"    max-height\": expected \";\", was \":100%;\"\A         on line 71 of sass/estilo.scss\A \A 66:     border-top: 1px solid black;\A 67:   }\A 68:   \A 69:   img {\A 70:     max-width: 100%\A 71:     max-height:100%;\A 72:   }\A 73: \A 74: \A 75: }\A 76: "; }

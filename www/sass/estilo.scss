@@ -6,8 +6,9 @@ $break-dt: 1920px;
 // VARIABLES FUENTES
 @import "tamaniofuentes";
 
-// MIXINS
+
 // CARGA DE TIPOGRAFÍAS
+// MIXINS
 @mixin tipografia($nombretipo,$file,$peso) {
 
   @font-face {
@@ -22,6 +23,8 @@ $break-dt: 1920px;
 @include tipografia('AvantGardeStd','ITCAvantGardeStd-Demi.otf','300');
 @include tipografia('AvantGardeStd','ITCAvantGardeStd-Bold.otf','400');
 
+
+// Reglas CSS
 body {
 
   @media screen and (max-width: $break-mb)
@@ -47,7 +50,7 @@ body {
 }
 
 .logo-desktop {
-  margin: 2em 0 0.5em 2em;
+  margin: 2em 0 0.5em 4em;
 }
 
 .logo-mobile  {
@@ -55,18 +58,28 @@ body {
   margin: 1em 2em 1em 0;
 }
 
+header {
+
+  padding: 1em 0;
+
+  nav {
+    border-top: 1px solid black;
+  }
+  
+  img {
+    max-width: 100%
+    max-height:100%;
+  }
+
+
+}
 
 footer {
 
   text-align: center;
   color: #ffffff;
   background: #d50011;
-
-  adress
-  {
-    display: block;
-    padding: 1em 0 2em 0;
-  }
+  padding: 1em 0 2em 0;
 
     .footer-telefono {
       display:block;
@@ -80,8 +93,6 @@ footer {
       font-weight: 300;
       font-size: $fontsize-footer-detalle;
     }
-
-
 }
 
 
