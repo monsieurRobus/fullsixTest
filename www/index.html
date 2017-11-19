@@ -13,7 +13,7 @@
   <body>
       <header>
         <div id="logo"></div>
-        <nav>
+        <nav id="navegacion">
           <div class="row">
             <ul>
               <li class="col-3"><span class="menu-nav">Compra online</span></li>
@@ -32,10 +32,10 @@
 
         </div>
         <div id="cintillo" class="row">
-          <div id="cintillo-left" class="col-6">
-            <img src="./img/desktop/cintillo/50%.png" /><span class="cintillo-descuento">de descuento en tus 3 primeras compras desde 100&euro;</span>
+          <div id="cintillo-left">
+            <span class="cintillo-descuento">de descuento en tus 3 primeras compras desde 100&euro;</span><img class="cintillo-img" src="./img/desktop/cintillo/50%.png" />
           </div>
-          <div id="cintillo-right" class="col-6">
+          <div id="cintillo-right">
             <span class="cintillo-link">Ahorra ya</span>
           </div>
         </div>
@@ -56,12 +56,13 @@
         </footer>
       <script>
         var anchoDesktop = 480;   // Ancho a partir del cual cambiamos de mobile a Desktop
+        var anchoVentana = window.innerWidth;
+        var divLogo = document.getElementById("logo");
+        var cintilloRight = document.getElementById("cintillo-right");
+        var cintilloLeft = document.getElementById("cintillo-left");
 
         // Una vez el documento esté preparado, procedemos a realizar la carga de página correspondiente.
         var setupInicial = function(){
-
-          var anchoVentana = window.innerWidth;
-          var divLogo = document.getElementById("logo");
 
           // LOGO
           // En función del ancho de ventana cargará la imagen que corresponda en el div del logo,
@@ -72,12 +73,15 @@
 
             $(divLogo).html('<img alt="Logo Eroski" src="./img/desktop/logo-eroski.png" />');
             $(divLogo).addClass('logo-desktop');   // Asignamos la clase correspondiente a la imagen
-
+            $(cintilloLeft).addClass('col-6');
+            $(cintilloRight).addClass('col-6');
           }
           // 2. Mobile
           else {
             $(divLogo).html('<img alt="Logo Eroski Mobile" src="./img/mobile/logo-eroski-mobile.png" />');
             $(divLogo).addClass('logo-mobile');
+            $(cintilloLeft).addClass('col-12');
+            $(cintilloRight).addClass('col-12');
           }
 
         };
@@ -104,17 +108,20 @@
               {
                 $(divLogo).html('<img alt="Logo Eroski" src="./img/desktop/logo-eroski.png" />');
                 $(divLogo).addClass('logo-desktop').removeClass('logo-mobile');   // Asignamos la clase correspondiente a la imagen
+                $(cintilloLeft).addClass('col-6').removeClass('col-12');
+                $(cintilloRight).addClass('col-6').removeClass('col-12');
               }
             }
 
           // 2. Desktop - Mobile
           else {
-
             // LOGO
             if ($(divLogo).hasClass('logo-desktop'))
             {
               $(divLogo).html('<img alt="Logo Eroski Mobile" src="./img/mobile/logo-eroski-mobile.png" />');
               $(divLogo).addClass('logo-mobile').removeClass('logo-desktop');   // Asignamos la clase correspondiente a la imagen
+              $(cintilloLeft).addClass('col-12').removeClass('col-6');
+              $(cintilloRight).addClass('col-12').removeClass('col-6');
             }
           }
         };
