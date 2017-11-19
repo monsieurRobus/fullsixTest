@@ -1,59 +1,153 @@
-/*
-Error: Invalid CSS after "    max-height": expected ";", was ":100%;"
-        on line 71 of sass/estilo.scss
+@font-face {
+  font-family: AvantGardeStd;
+  src: url("../font/ITCAvantGardeStd-Bk.otf") format("opentype");
+  font-weight: 100; }
+@font-face {
+  font-family: AvantGardeStd;
+  src: url("../font/ITCAvantGardeStd-Md.otf") format("opentype");
+  font-weight: 200; }
+@font-face {
+  font-family: AvantGardeStd;
+  src: url("../font/ITCAvantGardeStd-Demi.otf") format("opentype");
+  font-weight: 300; }
+@font-face {
+  font-family: AvantGardeStd;
+  src: url("../font/ITCAvantGardeStd-Bold.otf") format("opentype");
+  font-weight: 400; }
+* {
+  box-sizing: border-box; }
 
-66:     border-top: 1px solid black;
-67:   }
-68:   
-69:   img {
-70:     max-width: 100%
-71:     max-height:100%;
-72:   }
-73: 
-74: 
-75: }
-76: 
+.row {
+  width: 100%;
+  content: "";
+  clear: both;
+  display: table; }
 
-Backtrace:
-sass/estilo.scss:71
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1278:in `expected'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1208:in `expected'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1203:in `tok!'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:804:in `block in try_declaration'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:1254:in `rethrow'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:809:in `try_declaration'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:732:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:697:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:686:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:678:in `block'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:747:in `declaration_or_ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:697:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:689:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:678:in `block'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:670:in `ruleset'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:696:in `block_child'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:689:in `block_contents'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:137:in `stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/scss/parser.rb:41:in `parse'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:414:in `_to_tree'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:389:in `_render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/engine.rb:307:in `render_with_sourcemap'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:462:in `update_stylesheet'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `each'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:443:in `on_file_changed'
-/Library/Ruby/Gems/2.3.0/gems/sass-3.5.3/lib/sass/plugin/compiler.rb:320:in `block in watch'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/config.rb:23:in `call'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:115:in `_process_changes'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:19:in `block in loop_for'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/processor.rb:15:in `loop_for'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:84:in `_wait_for_changes'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/event/loop.rb:42:in `block in setup'
-/Library/Ruby/Gems/2.3.0/gems/sass-listen-4.0.0/lib/sass-listen/internals/thread_pool.rb:6:in `block in add'
-*/
-body:before {
-  white-space: pre;
-  font-family: monospace;
-  content: "Error: Invalid CSS after \"    max-height\": expected \";\", was \":100%;\"\A         on line 71 of sass/estilo.scss\A \A 66:     border-top: 1px solid black;\A 67:   }\A 68:   \A 69:   img {\A 70:     max-width: 100%\A 71:     max-height:100%;\A 72:   }\A 73: \A 74: \A 75: }\A 76: "; }
+.col-1 {
+  width: 8.33%; }
+
+.col-2 {
+  width: 16.66%; }
+
+.col-3 {
+  width: 25%; }
+
+.col-4 {
+  width: 33.33%; }
+
+.col-5 {
+  width: 41.66%; }
+
+.col-6 {
+  width: 50%; }
+
+.col-7 {
+  width: 58.33%; }
+
+.col-8 {
+  width: 66.66%; }
+
+.col-9 {
+  width: 75%; }
+
+.col-10 {
+  width: 83.33%; }
+
+.col-11 {
+  width: 91.66%; }
+
+.col-12 {
+  width: 100%; }
+
+[class*="col-"] {
+  float: left; }
+
+body {
+  margin: auto;
+  font-family: AvantGardeStd; }
+  @media screen and (max-width: 480px) {
+    body {
+      width: 100%;
+      background: #000000;
+      max-width: 480px; } }
+  @media screen and (max-width: 1920px) {
+    body {
+      width: 100%;
+      background: #FFFFFF;
+      max-width: 1280px; } }
+
+.logo-desktop {
+  margin: 2em 0 0.5em 4em; }
+
+.logo-mobile {
+  text-align: center;
+  margin: 1em 2em 1em 0; }
+
+header {
+  padding: 0; }
+  header nav {
+    padding: 1em 0;
+    border-top: 1px solid black; }
+    header nav .menu-nav {
+      padding: 0 0 0 1.3em; }
+      @media screen and (max-width: 480px) {
+        header nav .menu-nav {
+          display: hidden; } }
+    header nav ul {
+      list-style-type: none; }
+    header nav li {
+      display: inline; }
+    header nav img {
+      height: 2.6em;
+      object-fit: contain; }
+  header #cintillo {
+    box-sizing: border-box; }
+    header #cintillo #cintillo-left {
+      width: 50%;
+      text-align: right; }
+      header #cintillo #cintillo-left .cintillo-descuento {
+        padding: 0.5em;
+        display: inline-block;
+        width: 28%;
+        font-weight: 100;
+        text-align: left;
+        font-size: 16px; }
+    header #cintillo #cintillo-right {
+      width: 50%;
+      text-align: left;
+      font-weight: 300;
+      font-size: 18px; }
+      header #cintillo #cintillo-right .cintillo-link {
+        width: 100%;
+        background: url("./../img/desktop/cintillo/cuadrados-amarillos-deco.png") no-repeat;
+        display: block;
+        padding: 1.4em 1em; }
+    @media screen and (max-width: 480px) {
+      header #cintillo #cintillo-left, header #cintillo #cintillo-right, header #cintillo .cintillo-link {
+        width: 100%; }
+      header #cintillo #cintillo-left img {
+        padding: 0.2em;
+        width: 33%; }
+      header #cintillo #cintillo-left .cintillo-descuento {
+        width: 66%; } }
+
+footer {
+  text-align: center;
+  color: #ffffff;
+  background: #d50011;
+  padding: 1em 0 2em 0; }
+  footer .footer-telefono {
+    display: block;
+    padding: 0.5em;
+    font-weight: 400;
+    font-size: 18px; }
+  footer .footer-horario {
+    display: block;
+    padding: 0.2em;
+    font-weight: 300;
+    font-size: 14px; }
+
+.container {
+  width: 100%; }
+
+/*# sourceMappingURL=estilo.css.map */
