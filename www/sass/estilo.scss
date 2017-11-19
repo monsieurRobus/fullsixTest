@@ -201,6 +201,50 @@ footer {
       text-align: center;
       display:flex;
     }
+
+    // CSS HOVER EXTRAIDO DE PROYECTO DE EJEMPLO DE W3SCHOOLS, EDITADO para
+    // EL PROYECTO ACTUAL
+    // URL: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity
+    .destacado {
+      width: 100%;
+      height: 100%;
+    }
+
+    .contenedor {
+      position: relative;
+
+    }
+
+    .imghover {
+      padding:0;
+      margin:0;
+      opacity:1;
+      display:block;
+      width:inherit;
+      height: auto;
+      transition: .5 ease;
+      backface-visibility: hidden;
+    }
+
+    .leyenda {
+      padding:0;
+      margin:0;
+      transition: .5 ease;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      transform: translate(-15px,-5px);
+      -ms-transform: translate(-15px,-5px);
+    }
+
+    .contenedor:hover .imghover {
+      opacity: 0.3;
+    }
+
+    .contenedor:hover .leyenda {
+      opacity: 1;
+    }
   }
 
 
@@ -275,26 +319,7 @@ footer {
       main {
         #destacados {
           display: inherit;
-
-            .destacado {
-              width: 100%;
-              height: 100%;
             }
-
-            .contenedor {
-              position: relative;
-            }
-
-            img {
-              opacity:1;
-              display:block;
-              width:100%;
-              
-            }
-
-
-
-        }
       }
 
 }

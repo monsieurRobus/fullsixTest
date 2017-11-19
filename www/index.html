@@ -37,9 +37,9 @@
       </header>
       <main>
         <section id="destacados">
-          <div id="destacado1" class="destacado contenedor">
+          <div id="destacado1" class="destacado">
           </div>
-          <div id="destacado2" class="destacado contenedor">
+          <div id="destacado2" class="destacado">
           </div>
         </section>
         <section id="ventajas">
@@ -81,8 +81,8 @@
             $(cintilloRight).addClass('col-6');
             $(navegacion).addClass("row");
             $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
-            $(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/desktop/destacados/imagen-destacado2.png' />");
-            $(destacado2).html("<h2>Productos Locales</h2><img src='./img/desktop/destacados/imagen-destacado2.png' />")
+            $(destacado1).html("<h2>Alimentación Saludable</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
+            $(destacado2).html("<h2>Productos Locales</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
           }
           // 2. Mobile
           else {
@@ -122,8 +122,8 @@
                 $(cintilloLeft).addClass('col-6').removeClass('col-12');
                 $(cintilloRight).addClass('col-6').removeClass('col-12');
                 $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
-                $(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/desktop/destacados/imagen-destacado2.png' />");
-                $(destacado2).html("<h2>Productos Locales</h2><img src='./img/desktop/destacados/imagen-destacado2.png' />")
+                $(destacado1).html("<h2>Alimentación Saludable</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
+                $(destacado2).html("<h2>Productos Locales</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
               }
             }
 
