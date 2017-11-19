@@ -37,11 +37,9 @@
       </header>
       <main>
         <section id="destacados">
-          <div id="destacado1" class="destacado">
-            
+          <div id="destacado1" class="destacado contenedor">
           </div>
-          <div id="destacado2" class="destacado">
-
+          <div id="destacado2" class="destacado contenedor">
           </div>
         </section>
         <section id="ventajas">
@@ -63,6 +61,8 @@
         var cintilloLeft = document.getElementById("cintillo-left");
         var navegacion = document.getElementById("navegacion");
         var menu = document.getElementById("menu");
+        var destacado1 = document.getElementById("destacado1");
+        var destacado2 = document.getElementById("destacado2");
 
 
         // Una vez el documento esté preparado, procedemos a realizar la carga de página correspondiente.
@@ -81,7 +81,8 @@
             $(cintilloRight).addClass('col-6');
             $(navegacion).addClass("row");
             $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
-
+            $(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/desktop/destacados/imagen-destacado2.png' />");
+            $(destacado2).html("<h2>Productos Locales</h2><img src='./img/desktop/destacados/imagen-destacado2.png' />")
           }
           // 2. Mobile
           else {
@@ -90,6 +91,8 @@
             $(cintilloLeft).addClass('col-12');
             $(cintilloRight).addClass('col-12');
             $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><span class='cintillo-img' ><img src='./img/mobile/cintillo/50.png' /></span>");
+            $(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/mobile/destacados/img-destacado1.png' />");
+            $(destacado2).html("<h2>Productos Locales</h2><img src='./img/mobile/destacados/img-destacado2.png' />")
           }
 
         };
@@ -119,6 +122,8 @@
                 $(cintilloLeft).addClass('col-6').removeClass('col-12');
                 $(cintilloRight).addClass('col-6').removeClass('col-12');
                 $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
+                $(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/desktop/destacados/imagen-destacado2.png' />");
+                $(destacado2).html("<h2>Productos Locales</h2><img src='./img/desktop/destacados/imagen-destacado2.png' />")
               }
             }
 
@@ -132,7 +137,8 @@
               $(cintilloLeft).addClass('col-12').removeClass('col-6');
               $(cintilloRight).addClass('col-12').removeClass('col-6');
               $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><span class='cintillo-img' ><img src='./img/mobile/cintillo/50.png' /></span>");
-
+              $(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/mobile/destacados/img-destacado1.png' />");
+              $(destacado2).html("<h2>Productos Locales</h2><img src='./img/mobile/destacados/img-destacado2.png' />")
             }
           }
         };
