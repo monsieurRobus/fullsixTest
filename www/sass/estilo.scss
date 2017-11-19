@@ -92,9 +92,9 @@ header {
   padding: 0;
 
   #navegacion {
-    padding: 0 0;
-    height:80px;
+
     border-top: 1px solid black;
+    display: block;
 
     .menu-nav {
 
@@ -110,10 +110,8 @@ header {
     }
 
     li{
-      position:relative;
-      display: block;
-      top: 50%;
-      height: 80px;
+
+
     }
 
   }
@@ -179,6 +177,10 @@ header {
      }
    }
   }
+
+  .scroll {
+
+  }
 }
 
 // MOBILE
@@ -221,6 +223,23 @@ header {
           -ms-overflow-style: -ms-autohiding-scrollbar;
         }
       }
+
+      .scroll {
+        white-space: nowrap;
+        overflow-x: auto;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+      }
+
+      ul {
+        li {
+
+          margin: 1em;
+
+        }
+      }
+
+
 }
 
 

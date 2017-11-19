@@ -86,9 +86,8 @@ body {
 header {
   padding: 0; }
   header #navegacion {
-    padding: 0 0;
-    height: 80px;
-    border-top: 1px solid black; }
+    border-top: 1px solid black;
+    display: block; }
     header #navegacion .menu-nav {
       padding: 1em 0 1em 1.3em; }
       @media screen and (max-width: 480px) {
@@ -96,11 +95,6 @@ header {
           display: none; } }
     header #navegacion ul {
       list-style-type: none; }
-    header #navegacion li {
-      position: relative;
-      display: block;
-      top: 50%;
-      height: 80px; }
   header #cintillo {
     background: #fec701; }
     header #cintillo #cintillo-left .cintillo-descuento {
@@ -160,7 +154,16 @@ header {
     white-space: nowrap;
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
-    -ms-overflow-style: -ms-autohiding-scrollbar; } }
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+  .scroll {
+    white-space: nowrap;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch;
+    -ms-overflow-style: -ms-autohiding-scrollbar; }
+
+  ul li {
+    margin: 1em; } }
 footer {
   width: inherit;
   text-align: center;

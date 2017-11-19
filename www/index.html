@@ -14,8 +14,7 @@
       <header>
         <div id="logo"></div>
         <nav id="navegacion">
-          <div class="row">
-            <ul class="list-nav">
+            <ul id="menu" class="list-nav">
               <li class="col-3 menu-nav"><span>Compra online</span></li>
               <li class="col-1"><img src="./img/desktop/iconos-compra-online/icon1.png" /></li>
               <li class="col-1"><img src="./img/desktop/iconos-compra-online/icon2.png" /></li>
@@ -26,7 +25,6 @@
               <li class="col-1"><img src="./img/desktop/iconos-compra-online/icon7.png" /></li>
               <li class="col-1"><img src="./img/desktop/iconos-compra-online/icon8.png" /></li>
             </ul>
-          </div>
         </nav>
         <div id="slider">
 
@@ -60,6 +58,8 @@
         var divLogo = document.getElementById("logo");
         var cintilloRight = document.getElementById("cintillo-right");
         var cintilloLeft = document.getElementById("cintillo-left");
+        var navegacion = document.getElementById("navegacion");
+        var menu = document.getElementById("menu");
 
         // Una vez el documento esté preparado, procedemos a realizar la carga de página correspondiente.
         var setupInicial = function(){
@@ -75,6 +75,8 @@
             $(divLogo).addClass('logo-desktop');   // Asignamos la clase correspondiente a la imagen
             $(cintilloLeft).addClass('col-6');
             $(cintilloRight).addClass('col-6');
+            $(navegacion).addClass("row");
+
           }
           // 2. Mobile
           else {
