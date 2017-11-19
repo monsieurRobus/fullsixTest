@@ -119,16 +119,16 @@ header {
     #cintillo-left {
       .cintillo-descuento {
         float:right;
-        padding: 0.5em;
+
         display:inline-block;
         font-weight:100;
         text-align:left;
         font-size: $fontsize-cintillo-detalle;
       }
       .cintillo-img {
-        padding: 0.5em;
+
         display:inline-block;
-        float:right;
+
       }
     }
 
@@ -151,24 +151,60 @@ header {
 
 }
 // Responsive del header
-@media screen and (max-width: $break-mb){
+
+@media screen and (max-device-width: $break-dt){
+  header {
+   #cintillo-left{
+
+     .cintillo-descuento{
+       padding: 0.5em;
+       width:30%;
+     }
+     .cintillo-img {
+       padding: 0.5em;
+       float:right;
+     }
+   }
+   #cintillo-right {
+
+     .cintillo-link {
+       width:50%;
+       display: block;
+       background: url("./../img/desktop/cintillo/cuadrados-amarillos-deco.png") no-repeat;
+       background-size: cover;
+       padding: 1.4em 1em;
+     }
+   }
+  }
+}
+
+@media screen and  (max-device-width: $break-mb){
    header {
      #cintillo {
        height:160px;
      }
   #cintillo-left{
+
     height:80px;
+    width: 100%;
+    margin:auto;
       .cintillo-descuento{
+        padding:1em 1.5em;
         width:66%;
       }
       .cintillo-img {
-
+        float:left;
+        padding: 1em 0 1em 1em;
         width:33%;
+
       }
     }
 
     #cintillo-right{
       height:80px;
+
+
+
     }
         #navegacion {
           padding:0;
@@ -181,27 +217,7 @@ header {
       }
 }
 
-@media screen and (max-width: $break-dt){
-  header {
-   #cintillo-left{
 
-     .cintillo-descuento{
-       width:40%;
-     }
-   }
-   #cintillo-right {
-
-     .cintillo-link {
-       width:50%;
-       display: block;
-       background: url("./../img/desktop/cintillo/cuadrados-amarillos-deco.png") no-repeat;
-       background-size: cover;
-
-       padding: 1.4em 1em;
-     }
-   }
-  }
-}
 
 
 footer {

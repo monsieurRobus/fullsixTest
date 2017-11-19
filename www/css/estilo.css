@@ -101,15 +101,12 @@ header {
     background: #fec701; }
     header #cintillo #cintillo-left .cintillo-descuento {
       float: right;
-      padding: 0.5em;
       display: inline-block;
       font-weight: 100;
       text-align: left;
       font-size: 16px; }
     header #cintillo #cintillo-left .cintillo-img {
-      padding: 0.5em;
-      display: inline-block;
-      float: right; }
+      display: inline-block; }
     header #cintillo #cintillo-right {
       text-align: left;
       font-weight: 300;
@@ -123,14 +120,32 @@ header {
         background-size: cover;
         padding: 1.4em 1em; }
 
-@media screen and (max-width: 480px) {
+@media screen and (max-device-width: 1920px) {
+  header #cintillo-left .cintillo-descuento {
+    padding: 0.5em;
+    width: 30%; }
+  header #cintillo-left .cintillo-img {
+    padding: 0.5em;
+    float: right; }
+  header #cintillo-right .cintillo-link {
+    width: 50%;
+    display: block;
+    background: url("./../img/desktop/cintillo/cuadrados-amarillos-deco.png") no-repeat;
+    background-size: cover;
+    padding: 1.4em 1em; } }
+@media screen and (max-device-width: 480px) {
   header #cintillo {
     height: 160px; }
   header #cintillo-left {
-    height: 80px; }
+    height: 80px;
+    width: 100%;
+    margin: auto; }
     header #cintillo-left .cintillo-descuento {
+      padding: 1em 1.5em;
       width: 66%; }
     header #cintillo-left .cintillo-img {
+      float: left;
+      padding: 1em 0 1em 1em;
       width: 33%; }
   header #cintillo-right {
     height: 80px; }
@@ -141,15 +156,6 @@ header {
     overflow-x: auto;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; } }
-@media screen and (max-width: 1920px) {
-  header #cintillo-left .cintillo-descuento {
-    width: 40%; }
-  header #cintillo-right .cintillo-link {
-    width: 50%;
-    display: block;
-    background: url("./../img/desktop/cintillo/cuadrados-amarillos-deco.png") no-repeat;
-    background-size: cover;
-    padding: 1.4em 1em; } }
 footer {
   width: inherit;
   text-align: center;
