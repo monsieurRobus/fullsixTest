@@ -86,17 +86,21 @@ body {
 header {
   padding: 0; }
   header #navegacion {
-    padding: 1em 0;
+    padding: 0 0;
+    height: 80px;
     border-top: 1px solid black; }
     header #navegacion .menu-nav {
-      padding: 0 0 0 1.3em; }
+      padding: 1em 0 1em 1.3em; }
       @media screen and (max-width: 480px) {
         header #navegacion .menu-nav {
           display: none; } }
     header #navegacion ul {
       list-style-type: none; }
     header #navegacion li {
-      display: inline; }
+      position: relative;
+      display: block;
+      top: 50%;
+      height: 80px; }
   header #cintillo {
     background: #fec701; }
     header #cintillo #cintillo-left .cintillo-descuento {
@@ -117,8 +121,7 @@ header {
         width: inherit;
         display: block;
         background: url("./../img/desktop/cintillo/cuadrados-amarillos-deco.png") no-repeat;
-        background-size: cover;
-        padding: 1.4em 1em; }
+        background-size: cover; }
 
 @media screen and (max-device-width: 1920px) {
   header #cintillo-left .cintillo-descuento {
@@ -146,9 +149,11 @@ header {
     header #cintillo-left .cintillo-img {
       float: left;
       padding: 1em 0 1em 1em;
-      width: 33%; }
+      width: 30%; }
   header #cintillo-right {
     height: 80px; }
+    header #cintillo-right .cintillo-link {
+      padding: 1.7em 1em; }
   header #navegacion {
     padding: 0;
     margin: 0;
