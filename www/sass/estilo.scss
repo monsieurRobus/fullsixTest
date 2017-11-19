@@ -138,6 +138,7 @@ header {
       font-size: $fontsize-cintillo-link;
       .cintillo-link {
         float:left;
+        height:inherit;
         width:inherit;
         display: block;
         background: url("./../img/desktop/cintillo/cuadrados-amarillos-deco.png") no-repeat;
@@ -161,6 +162,7 @@ header {
         width:66%;
       }
       .cintillo-img {
+
         width:33%;
       }
     }
@@ -184,7 +186,7 @@ header {
    #cintillo-left{
 
      .cintillo-descuento{
-       width:12em;
+       width:40%;
      }
    }
    #cintillo-right {
