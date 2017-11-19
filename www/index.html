@@ -15,30 +15,34 @@
         <div id="logo"></div>
         <nav id="navegacion" class="scroll">
               <span class="col-3 titulo-nav"><span>Compra online</span></span>
-              <span class="col-1"><img src="./img/desktop/iconos-compra-online/icon1.png" /></span>
-              <span class="col-1"><img src="./img/desktop/iconos-compra-online/icon2.png" /></span>
-              <span class="col-1"><img src="./img/desktop/iconos-compra-online/icon3.png" /></span>
-              <span class="col-1"><img src="./img/desktop/iconos-compra-online/icon4.png" /></span>
-              <span class="col-1"><img src="./img/desktop/iconos-compra-online/icon5.png" /></span>
-              <span class="col-1"><img src="./img/desktop/iconos-compra-online/icon6.png" /></span>
-              <span class="col-1"><img src="./img/desktop/iconos-compra-online/icon7.png" /></span>
-              <span class="col-1"><img src="./img/desktop/iconos-compra-online/icon8.png" /></span>
+              <span id="" class="col-1"><img src="./img/desktop/iconos-compra-online/icon1.png" /></span>
+              <span id="" class="col-1"><img src="./img/desktop/iconos-compra-online/icon2.png" /></span>
+              <span id="" class="col-1"><img src="./img/desktop/iconos-compra-online/icon3.png" /></span>
+              <span id="" class="col-1"><img src="./img/desktop/iconos-compra-online/icon4.png" /></span>
+              <span id="" class="col-1"><img src="./img/desktop/iconos-compra-online/icon5.png" /></span>
+              <span id="" class="col-1"><img src="./img/desktop/iconos-compra-online/icon6.png" /></span>
+              <span id="" class="col-1"><img src="./img/desktop/iconos-compra-online/icon7.png" /></span>
+              <span id="" class="col-1"><img src="./img/desktop/iconos-compra-online/icon8.png" /></span>
         </nav>
         <div id="slider">
 
         </div>
         <div id="cintillo" class="row">
           <div id="cintillo-left">
-            <span class="cintillo-descuento">de descuento en tus 3 primeras compras desde 100&euro;</span><img class="cintillo-img" src="./img/desktop/cintillo/50%.png" />
           </div>
           <div id="cintillo-right">
-            <span class="cintillo-link">Ahorra ya <img src="./img/desktop/cintillo/flecha.png" /></span>
+            <span class="cintillo-link">Ahorra ya <img alt="Flecha" src="./img/desktop/cintillo/flecha.png"</span>
           </div>
         </div>
       </header>
       <main>
         <section id="destacados">
+          <div id="destacado1" class="destacado">
+            
+          </div>
+          <div id="destacado2" class="destacado">
 
+          </div>
         </section>
         <section id="ventajas">
 
@@ -54,10 +58,12 @@
         var anchoDesktop = 480;   // Ancho a partir del cual cambiamos de mobile a Desktop
         var anchoVentana = window.innerWidth;
         var divLogo = document.getElementById("logo");
+        var cintillo50p = document.getElementById("cintillo-50p");
         var cintilloRight = document.getElementById("cintillo-right");
         var cintilloLeft = document.getElementById("cintillo-left");
         var navegacion = document.getElementById("navegacion");
         var menu = document.getElementById("menu");
+
 
         // Una vez el documento esté preparado, procedemos a realizar la carga de página correspondiente.
         var setupInicial = function(){
@@ -74,6 +80,7 @@
             $(cintilloLeft).addClass('col-6');
             $(cintilloRight).addClass('col-6');
             $(navegacion).addClass("row");
+            $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
 
           }
           // 2. Mobile
@@ -82,6 +89,7 @@
             $(divLogo).addClass('logo-mobile');
             $(cintilloLeft).addClass('col-12');
             $(cintilloRight).addClass('col-12');
+            $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><span class='cintillo-img' ><img src='./img/mobile/cintillo/50.png' /></span>");
           }
 
         };
@@ -92,17 +100,17 @@
         // el paso de una resolución a otra.
         // Se ha procurado que solo se ejecute el código una vez por cada cambio de resolución.
 
+
         var cambioResolucion = function(){
 
           //
           var anchoVentana = window.innerWidth;
-          var divLogo = document.getElementById("logo");
 
 
           // 1. Mobile - Desktop
           if (anchoVentana >= anchoDesktop) {
 
-            // LOGO
+            // HEADER
             $(divLogo).html('<img alt="Logo Eroski" src="./img/desktop/logo-eroski.png" />');
               if ($(divLogo).hasClass('logo-mobile'))
               {
@@ -110,18 +118,21 @@
                 $(divLogo).addClass('logo-desktop').removeClass('logo-mobile');   // Asignamos la clase correspondiente a la imagen
                 $(cintilloLeft).addClass('col-6').removeClass('col-12');
                 $(cintilloRight).addClass('col-6').removeClass('col-12');
+                $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
               }
             }
 
           // 2. Desktop - Mobile
           else {
-            // LOGO
+            // HEADER
             if ($(divLogo).hasClass('logo-desktop'))
             {
               $(divLogo).html('<img alt="Logo Eroski Mobile" src="./img/mobile/logo-eroski-mobile.png" />');
               $(divLogo).addClass('logo-mobile').removeClass('logo-desktop');   // Asignamos la clase correspondiente a la imagen
               $(cintilloLeft).addClass('col-12').removeClass('col-6');
               $(cintilloRight).addClass('col-12').removeClass('col-6');
+              $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><span class='cintillo-img' ><img src='./img/mobile/cintillo/50.png' /></span>");
+
             }
           }
         };

@@ -1,0 +1,11 @@
+
+
+{
+
+    "menu":{
+      "001":{
+        "nombre":"super",
+        "img-desktop":"./img/desktop/iconos-compra-online/icon1.png",
+      }
+  }
+}
