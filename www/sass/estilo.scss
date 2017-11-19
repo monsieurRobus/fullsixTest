@@ -6,7 +6,6 @@ $break-dt: 1920px;
 // VARIABLES FUENTES
 @import "tamaniofuentes";
 
-
 // CARGA DE TIPOGRAFÍAS
 // MIXINS
 @mixin tipografia($nombretipo,$file,$peso) {
@@ -222,28 +221,37 @@ footer {
       display:block;
       width:inherit;
       height: auto;
-      transition: .5 ease;
+      transition: opacity .5s ease;
       backface-visibility: hidden;
     }
 
     .leyenda {
       padding:0;
       margin:0;
-      transition: .5 ease;
+      transition: opacity .5s ease;
       opacity: 0;
       position: absolute;
       top: 0;
       left: 0;
+      filter:blur(5px);
       transform: translate(-15px,-5px);
       -ms-transform: translate(-15px,-5px);
-    }
+      img {
+        height: 19em;
+      }
+  }
 
     .contenedor:hover .imghover {
-      opacity: 0.3;
+      opacity: 0.8;
     }
 
     .contenedor:hover .leyenda {
       opacity: 1;
+      filter:blur(0);
+    }
+
+    @keyframes moveIn {
+
     }
   }
 
@@ -259,40 +267,39 @@ footer {
 
   //HEADER MOBILE
    header {
-
      #cintillo {
        height:160px;
      }
-  #cintillo-left{
+     #cintillo-left{
 
-    height:80px;
-    width: 100%;
-    margin:auto;
-      .cintillo-descuento{
-        padding:1em 1.5em;
-        width:66%;
+      height:80px;
+      width: 100%;
+      margin:auto;
+        .cintillo-descuento{
+          padding:1em 1.5em;
+          width:66%;
+        }
+        .cintillo-img {
+          float:right;
+          padding: 1em 0 0 1em;
+          width:30%;
+        }
       }
-      .cintillo-img {
-        float:right;
-        padding: 1em 0 0 1em;
-        width:30%;
-      }
-    }
 
     #cintillo-right{
-      height:80px;
-      .cintillo-link {
-        padding:1.7em 1em;  background: url("./../img/mobile/cintillo/cuadrados-amarillos-deco-mobile.png") no-repeat;
-          background-size: cover;
+        height:80px;
+        .cintillo-link {
+          padding:1.7em 1em;  background: url("./../img/mobile/cintillo/cuadrados-amarillos-deco-mobile.png") no-repeat;
+            background-size: cover;
+        }
       }
-    }
 
-    .scroll {
-      white-space: nowrap;
-      overflow-x: scroll;
-      -webkit-overflow-scrolling: touch;
-      -ms-overflow-style: -ms-autohiding-scrollbar;
-    }
+      .scroll {
+        white-space: nowrap;
+        overflow-x: scroll;
+        -webkit-overflow-scrolling: touch;
+        -ms-overflow-style: -ms-autohiding-scrollbar;
+      }
 
         #navegacion {
           height:80px;
