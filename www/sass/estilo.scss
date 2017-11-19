@@ -178,6 +178,10 @@ header {
    }
   }
 
+  [class*="col-"] {
+    float:left;
+  }
+
   .scroll {
 
   }
@@ -217,10 +221,9 @@ header {
         #navegacion {
           padding:0;
           margin:0;
-          white-space: nowrap;
-          overflow-x:auto;
-          -webkit-overflow-scrolling: touch;
-          -ms-overflow-style: -ms-autohiding-scrollbar;
+          [class*="col-"] {
+            width:2em;
+          }
         }
       }
 
