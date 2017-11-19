@@ -67,13 +67,9 @@ body {
   font-family: AvantGardeStd; }
   @media screen and (max-width: 480px) {
     body {
-      width: 100%;
-      background: #000000;
       max-width: 480px; } }
   @media screen and (max-width: 1920px) {
     body {
-      width: 100%;
-      background: #FFFFFF;
       max-width: 1280px; } }
 
 .logo-desktop {
@@ -112,6 +108,9 @@ header {
       background-size: cover; }
 
 @media screen and (max-device-width: 1920px) {
+  body {
+    max-width: 1280px; }
+
   header #navegacion {
     padding: 1em 0 1em; }
     header #navegacion .titulo-nav {
@@ -155,7 +154,7 @@ header {
     -ms-overflow-style: -ms-autohiding-scrollbar; }
   header #navegacion {
     height: 80px;
-    padding: 1em 0em;
+    padding: 0.8em 0em 0;
     margin: 0; }
     header #navegacion [class*="col-"] {
       text-align: center;

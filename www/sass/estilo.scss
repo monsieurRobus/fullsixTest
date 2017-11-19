@@ -58,14 +58,14 @@ $break-dt: 1920px;
 body {
 
   @media screen and (max-width: $break-mb){
-    width:100%;
-    background: #000000;
+
+
     max-width: 480px;
   }
   @media screen and (max-width: $break-dt)
   {
-    width:100%;
-    background: #FFFFFF;
+
+
     max-width: 1280px;
   }
 
@@ -136,9 +136,12 @@ header {
 
 // DESKTOP
 @media screen and (max-device-width: $break-dt){
+
+  body {
+    max-width: 1280px;
+  }
+
   header {
-
-
     #navegacion {
       padding:1em 0 1em;
 
@@ -210,10 +213,10 @@ header {
       -webkit-overflow-scrolling: touch;
       -ms-overflow-style: -ms-autohiding-scrollbar;
     }
-    
+
         #navegacion {
           height:80px;
-          padding:1em 0em;
+          padding:0.8em 0em 0;
           margin:0;
               // Configuración horizontal del Slider para evitar que se amontonen y el overflow sea efectivo
           [class*="col-"] {
