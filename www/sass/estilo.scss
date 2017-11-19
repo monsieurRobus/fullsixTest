@@ -92,28 +92,11 @@ header {
   padding: 0;
 
   #navegacion {
-
     border-top: 1px solid black;
     display: block;
 
-    .menu-nav {
-
-      padding: 1em 0 1em 1.3em;
-
-      @media screen and (max-width: $break-mb){
-        display:none;
-      }
-    }
-
-    ul {
-      list-style-type: none;
-    }
-
-    li{
-
 
     }
-
   }
 
   #cintillo {
@@ -147,13 +130,22 @@ header {
     }
   }
 
-}
+
 
 // Responsive del header
 
 // DESKTOP
 @media screen and (max-device-width: $break-dt){
   header {
+
+
+    #navegacion {
+      padding:1em 0 1em;
+
+      .titulo-nav {
+        padding: 1em 0 1em 1.3em;
+        }
+    }
 
    #cintillo-left{
 
@@ -167,20 +159,19 @@ header {
      }
    }
    #cintillo-right {
-
      .cintillo-link {
        width:50%;
-       display: block;
-       background: url("./../img/desktop/cintillo/cuadrados-amarillos-deco.png") no-repeat;
-       background-size: cover;
        padding: 1.4em 1em;
      }
    }
   }
 
-  .scroll {
-
+  [class*="col-"] { // Configuración horizontal del Slider
+    float:left;
+    vertical-align: middle;
+    display: inline-block;
   }
+
 }
 
 // MOBILE
@@ -208,33 +199,34 @@ header {
 
     #cintillo-right{
       height:80px;
-
       .cintillo-link {
         padding:1.7em 1em;
       }
-
     }
+
+    .scroll {
+      white-space: nowrap;
+      overflow-x: scroll;
+      -webkit-overflow-scrolling: touch;
+      -ms-overflow-style: -ms-autohiding-scrollbar;
+    }
+    
         #navegacion {
-          padding:0;
+          height:80px;
+          padding:1em 0em;
           margin:0;
-          white-space: nowrap;
-          overflow-x:auto;
-          -webkit-overflow-scrolling: touch;
-          -ms-overflow-style: -ms-autohiding-scrollbar;
-        }
-      }
+              // Configuración horizontal del Slider para evitar que se amontonen y el overflow sea efectivo
+          [class*="col-"] {
+            text-align: center;
+            float:none;
+            width:5em;
+            vertical-align: middle;
+            display: inline-block;
+          }
 
-      .scroll {
-        white-space: nowrap;
-        overflow-x: auto;
-        -webkit-overflow-scrolling: touch;
-        -ms-overflow-style: -ms-autohiding-scrollbar;
-      }
-
-      ul {
-        li {
-
-          margin: 1em;
+          .titulo-nav {
+            display: none;  // OCULTAMOS el titulo "compra online"
+            }
 
         }
       }
