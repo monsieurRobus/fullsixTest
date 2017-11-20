@@ -26,6 +26,37 @@
         </nav>
         <div id="slider">
 
+          <div class="slideshow-container">
+            <div class="mySlides fade">
+              <div class="numbertext">1 / 3</div>
+              <img src="img1.jpg" style="width:100%">
+              <div class="text">Caption Text</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">2 / 3</div>
+              <img src="img2.jpg" style="width:100%">
+              <div class="text">Caption Two</div>
+            </div>
+
+            <div class="mySlides fade">
+              <div class="numbertext">3 / 3</div>
+              <img src="img3.jpg" style="width:100%">
+              <div class="text">Caption Three</div>
+            </div>
+
+            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          </div>
+          <br>
+
+          <div style="text-align:center">
+            <span class="dot" onclick="currentSlide(1)"></span>
+            <span class="dot" onclick="currentSlide(2)"></span>
+            <span class="dot" onclick="currentSlide(3)"></span>
+          </div>
+
+
         </div>
         <div id="cintillo" class="row">
           <div id="cintillo-left">
@@ -61,6 +92,8 @@
         var cintilloLeft = document.getElementById("cintillo-left");
         var navegacion = document.getElementById("navegacion");
         var menu = document.getElementById("menu");
+        var slider = document.getElementById("slider");
+        var destacados = document.getElementById("destacados");
         var destacado1 = document.getElementById("destacado1");
         var destacado2 = document.getElementById("destacado2");
 
@@ -83,6 +116,8 @@
             $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
             $(destacado1).html("<h2>Alimentación Saludable</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
             $(destacado2).html("<h2>Productos Locales</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
+            $(slider).html("Prueba Desktop");
+            $(destacados).addClass("destacados-flex");
           }
           // 2. Mobile
           else {
@@ -93,6 +128,7 @@
             $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><span class='cintillo-img' ><img src='./img/mobile/cintillo/50.png' /></span>");
             $(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/mobile/destacados/img-destacado1.png' />");
             $(destacado2).html("<h2>Productos Locales</h2><img src='./img/mobile/destacados/img-destacado2.png' />")
+            $(slider).html("Prueba Desktop");
           }
 
         };
@@ -124,6 +160,7 @@
                 $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
                 $(destacado1).html("<h2>Alimentación Saludable</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
                 $(destacado2).html("<h2>Productos Locales</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
+                $(destacados).addClass("destacados-flex");
               }
             }
 
@@ -139,6 +176,7 @@
               $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><span class='cintillo-img' ><img src='./img/mobile/cintillo/50.png' /></span>");
               $(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/mobile/destacados/img-destacado1.png' />");
               $(destacado2).html("<h2>Productos Locales</h2><img src='./img/mobile/destacados/img-destacado2.png' />")
+              $(destacados).removeClass("destacados-flex");
             }
           }
         };

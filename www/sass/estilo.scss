@@ -28,7 +28,7 @@ $break-dt: 1920px;
   box-sizing: border-box;
 }
 
-// DISEÑO DEL GRID
+// DISEÑO DEL GRID DE 12 COLUMNAS
 
 .row {
   width:100%;
@@ -54,10 +54,15 @@ $break-dt: 1920px;
   float:left;
 }
 
+// APLICAR FLEX A LOS DIVS CORRESPONDIENTES
+//
+.destacados-flex {
+  display:flex;
+}
+
 body {
   margin:auto;
   font-family: AvantGardeStd;
-}
 
 h1 {
 
@@ -89,9 +94,11 @@ header {
 
   #navegacion {
     border-top: 1px solid black;
-    display: block;
+    }
 
-
+    #slider {
+      clear:both;
+      float:left;
     }
   }
 
@@ -131,17 +138,20 @@ main {
 #destacados{
 
   margin:auto;
-  padding: 2em 0;
-  width:90%;
+  padding: 2em 2em;
+  width:100%;
 
-  .destacado{
-    margin:auto;
-    float:left;
-      img{
-        width: 95%;
+    .destacado{
+        margin:auto;
+        float:left;
+        padding:1em;
+          img{
+            width: 100%;
+          }
       }
   }
-}
+
+
 
 }
 
@@ -167,7 +177,6 @@ footer {
         }
     }
 
-
    #cintillo-left{
 
      .cintillo-descuento{
@@ -187,7 +196,7 @@ footer {
        background-size: cover;
      }
    }
-     [class*="col-"] { // Configuración horizontal del Slider
+     [class*="col-"] { // Configuración horizontal del menú COMPRA ONLINE (customización del grid)
        float:left;
        vertical-align: middle;
        display: inline-block;
@@ -198,7 +207,9 @@ footer {
   main {
     #destacados{
       text-align: center;
-      display:flex;
+
+
+
     }
 
     // CSS HOVER EXTRAIDO DE PROYECTO DE EJEMPLO DE W3SCHOOLS, EDITADO para
@@ -211,6 +222,7 @@ footer {
 
     .contenedor {
       position: relative;
+      width:100%;
 
     }
 
@@ -219,7 +231,7 @@ footer {
       margin:0;
       opacity:1;
       display:block;
-      width:inherit;
+      width:100%;
       height: auto;
       transition: opacity .5s ease;
       backface-visibility: hidden;
@@ -237,7 +249,7 @@ footer {
       transform: translate(-15px,-5px);
       -ms-transform: translate(-15px,-5px);
       img {
-        height: 19em;
+        height: 20em;
       }
   }
 
@@ -250,12 +262,10 @@ footer {
       filter:blur(0);
     }
 
-    @keyframes moveIn {
-
-    }
   }
 
 
+}
 }
 
 // MOBILE
@@ -267,6 +277,8 @@ footer {
 
   //HEADER MOBILE
    header {
+
+
      #cintillo {
        height:160px;
      }
@@ -305,8 +317,9 @@ footer {
           height:80px;
           padding:0.8em 0em 0;
           margin:0;
+          display:block;
 
-              // Configuración horizontal del Slider para evitar que se amontonen y el overflow sea efectivo
+              // Configuración horizontal del grid para el menú de compra online para evitar que se amontonen y el overflow sea efectivo
           [class*="col-"] {
             text-align: center;
             float:none;
@@ -321,18 +334,13 @@ footer {
 
         }
       }
-
       // MAIN MOBILE
       main {
         #destacados {
           display: inherit;
             }
       }
-
 }
-
-
-
 
 footer {
   width:inherit;
@@ -354,7 +362,6 @@ footer {
       font-size: $fontsize-footer-detalle;
     }
 }
-
 
 .container {
   width:100%;

@@ -62,120 +62,117 @@
 [class*="col-"] {
   float: left; }
 
+.destacados-flex {
+  display: flex; }
+
 body {
   margin: auto;
   font-family: AvantGardeStd; }
-
-h2 {
-  text-align: center;
-  font-size: 32px;
-  font-weight: 400; }
-
-.logo-desktop {
-  margin: 2em 0 0.5em 4em; }
-
-.logo-mobile {
-  text-align: center;
-  margin: 1em 2em 1em 0; }
-
-header {
-  padding: 0; }
-  header #navegacion {
-    border-top: 1px solid black;
-    display: block; }
-
-#cintillo {
-  background: #fec701; }
-  #cintillo #cintillo-left .cintillo-descuento {
-    float: right;
-    display: inline-block;
-    font-weight: 100;
-    text-align: left;
-    font-size: 16px; }
-  #cintillo #cintillo-left .cintillo-img {
-    display: inline-block; }
-  #cintillo #cintillo-right {
-    text-align: left;
-    font-weight: 300;
-    font-size: 18px; }
-    #cintillo #cintillo-right .cintillo-link {
-      float: left;
-      height: inherit;
-      width: inherit;
-      display: block; }
-
-main #destacados {
-  margin: auto;
-  padding: 2em 0;
-  width: 90%; }
-  main #destacados .destacado {
-    margin: auto;
-    float: left; }
-    main #destacados .destacado img {
-      width: 95%; }
-
-footer {
-  clear: both; }
-
-@media screen and (max-device-width: 1920px) {
-  body {
-    max-width: 1280px; }
-
-  header #navegacion {
-    padding: 1em 0 1em; }
-    header #navegacion .titulo-nav {
-      padding: 1em 0 1em 1.3em; }
-  header #cintillo-left .cintillo-descuento {
-    padding: 0.5em;
-    width: 30%; }
-  header #cintillo-left .cintillo-img {
-    padding: 0.5em;
-    float: right; }
-  header #cintillo-right .cintillo-link {
-    width: 50%;
-    padding: 1.4em 1em;
-    background: url("./../img/desktop/cintillo/cuadrados-amarillos-deco.png") no-repeat;
-    background-size: cover; }
-  header [class*="col-"] {
-    float: left;
-    vertical-align: middle;
-    display: inline-block; }
-
-  main #destacados {
+  body h2 {
     text-align: center;
-    display: flex; }
-  main .destacado {
-    width: 100%;
-    height: 100%; }
-  main .contenedor {
-    position: relative; }
-  main .imghover {
-    padding: 0;
-    margin: 0;
-    opacity: 1;
-    display: block;
-    width: inherit;
-    height: auto;
-    transition: opacity .5s ease;
-    backface-visibility: hidden; }
-  main .leyenda {
-    padding: 0;
-    margin: 0;
-    transition: opacity .5s ease;
-    opacity: 0;
-    position: absolute;
-    top: 0;
-    left: 0;
-    filter: blur(5px);
-    transform: translate(-15px, -5px);
-    -ms-transform: translate(-15px, -5px); }
-    main .leyenda img {
-      height: 19em; }
-  main .contenedor:hover .imghover {
-    opacity: 0.8; }
-  main .contenedor:hover .leyenda {
-    opacity: 1;
-    filter: blur(0); } }
+    font-size: 32px;
+    font-weight: 400; }
+  body .logo-desktop {
+    margin: 2em 0 0.5em 4em; }
+  body .logo-mobile {
+    text-align: center;
+    margin: 1em 2em 1em 0; }
+  body header {
+    padding: 0; }
+    body header #navegacion {
+      border-top: 1px solid black; }
+    body header #slider {
+      clear: both;
+      float: left; }
+  body #cintillo {
+    background: #fec701; }
+    body #cintillo #cintillo-left .cintillo-descuento {
+      float: right;
+      display: inline-block;
+      font-weight: 100;
+      text-align: left;
+      font-size: 16px; }
+    body #cintillo #cintillo-left .cintillo-img {
+      display: inline-block; }
+    body #cintillo #cintillo-right {
+      text-align: left;
+      font-weight: 300;
+      font-size: 18px; }
+      body #cintillo #cintillo-right .cintillo-link {
+        float: left;
+        height: inherit;
+        width: inherit;
+        display: block; }
+  body main #destacados {
+    margin: auto;
+    padding: 2em 2em;
+    width: 100%; }
+    body main #destacados .destacado {
+      margin: auto;
+      float: left;
+      padding: 1em; }
+      body main #destacados .destacado img {
+        width: 100%; }
+  body footer {
+    clear: both; }
+  @media screen and (max-device-width: 1920px) {
+    body body {
+      max-width: 1280px; }
+    body header #navegacion {
+      padding: 1em 0 1em; }
+      body header #navegacion .titulo-nav {
+        padding: 1em 0 1em 1.3em; }
+    body header #cintillo-left .cintillo-descuento {
+      padding: 0.5em;
+      width: 30%; }
+    body header #cintillo-left .cintillo-img {
+      padding: 0.5em;
+      float: right; }
+    body header #cintillo-right .cintillo-link {
+      width: 50%;
+      padding: 1.4em 1em;
+      background: url("./../img/desktop/cintillo/cuadrados-amarillos-deco.png") no-repeat;
+      background-size: cover; }
+    body header [class*="col-"] {
+      float: left;
+      vertical-align: middle;
+      display: inline-block; }
+    body main #destacados {
+      text-align: center; }
+    body main .destacado {
+      width: 100%;
+      height: 100%; }
+    body main .contenedor {
+      position: relative;
+      width: 100%; }
+    body main .imghover {
+      padding: 0;
+      margin: 0;
+      opacity: 1;
+      display: block;
+      width: 100%;
+      height: auto;
+      transition: opacity .5s ease;
+      backface-visibility: hidden; }
+    body main .leyenda {
+      padding: 0;
+      margin: 0;
+      transition: opacity .5s ease;
+      opacity: 0;
+      position: absolute;
+      top: 0;
+      left: 0;
+      filter: blur(5px);
+      transform: translate(-15px, -5px);
+      -ms-transform: translate(-15px, -5px); }
+      body main .leyenda img {
+        height: 20em; }
+    body main .contenedor:hover .imghover {
+      opacity: 0.8; }
+    body main .contenedor:hover .leyenda {
+      opacity: 1;
+      filter: blur(0); } }
+
 @media screen and (max-device-width: 480px) {
   body {
     max-width: 480px; }
@@ -207,7 +204,8 @@ footer {
   header #navegacion {
     height: 80px;
     padding: 0.8em 0em 0;
-    margin: 0; }
+    margin: 0;
+    display: block; }
     header #navegacion [class*="col-"] {
       text-align: center;
       float: none;
