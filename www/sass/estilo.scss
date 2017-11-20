@@ -28,7 +28,7 @@ $break-dt: 1920px;
   box-sizing: border-box;
 }
 
-// DISEÑO DEL GRID
+// DISEÑO DEL GRID DE 12 COLUMNAS
 
 .row {
   width:100%;
@@ -54,10 +54,15 @@ $break-dt: 1920px;
   float:left;
 }
 
+// APLICAR FLEX A LOS DIVS CORRESPONDIENTES
+//
+.destacados-flex {
+  display:flex;
+}
+
 body {
   margin:auto;
   font-family: AvantGardeStd;
-}
 
 h1 {
 
@@ -89,10 +94,24 @@ header {
 
   #navegacion {
     border-top: 1px solid black;
-    display: block;
+    }
 
+    #slider {
+      clear:both;
+      float:left;
+      position:relative;
+    }
+
+    #menu-slider-indice {
+      position:absolute;
+      width: 100%;
+      height:80px;
+      bottom:0;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
 
     }
+
   }
 
   #cintillo {
@@ -131,17 +150,20 @@ main {
 #destacados{
 
   margin:auto;
-  padding: 2em 0;
-  width:90%;
+  padding: 2em 2em;
+  width:100%;
 
-  .destacado{
-    margin:auto;
-    float:left;
-      img{
-        width: 95%;
+    .destacado{
+        margin:auto;
+        float:left;
+        padding:1em;
+          img{
+            width: 100%;
+          }
       }
   }
-}
+
+
 
 }
 
@@ -149,8 +171,118 @@ footer {
   clear:both;
 }
 
+// CSS PARA EL slideshow
 
-// DESKTOP
+  /* Contenedor slideshow */
+  .slideshow-contenedor {
+    width:100%;
+    position: relative;
+    margin: 0 auto;
+
+    .slideshow-contenido{
+      position: absolute; /* Position the background text */
+      width:100%;
+
+      bottom: 0; /* At the bottom. Use top:0 to append it to the top */
+      background: rgba(0, 0, 0, 0.5); /* Black background with 0.5 opacity */
+      color: #f1f1f1; /* Grey text */
+      width: 100%; /* Full width */
+      //padding: 2em; /* Some padding */
+
+      h2 {
+        margin: 0;
+        padding: 0;
+
+
+      }
+    }
+
+  }
+
+  .titular {
+          display: none;
+
+  }
+
+  /* Botones anterior y siguiente */
+  .anterior, .siguiente {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0;
+  }
+
+  /* Position the "next button" to the right */
+  .siguiente {
+    right: 0;
+    border-radius: 3px 0 0 3px;
+  }
+
+  // On hover, add a black background color with a little bit see-through
+  .anterior:hover, .siguiente:hover {
+    background-color: rgba(0,0,0,0.8);
+  }
+
+  // CADA UNO DE LOS ELEMENTOS DEL MENU
+  .menu-slide {
+    cursor:pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .menu-elemento {
+    font-size: $fontsize-slider-carrusel;
+    font-weight: 400;
+    color: #ffffff;
+    margin:0.7em 0;
+    padding:1.2em;
+    display:inline-block;
+    height: 60px;
+    width: 170px;
+    vertical-align: middle;
+    border: 2px solid #ffffff;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .menu-elemento:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+
+
+
+// RESPONSIVE DESKTOP
 @media screen and (max-device-width: $break-dt){
 
   body {
@@ -166,7 +298,6 @@ footer {
         padding: 1em 0 1em 1.3em;
         }
     }
-
 
    #cintillo-left{
 
@@ -187,7 +318,7 @@ footer {
        background-size: cover;
      }
    }
-     [class*="col-"] { // Configuración horizontal del Slider
+     [class*="col-"] { // Configuración horizontal del menú COMPRA ONLINE (customización del grid)
        float:left;
        vertical-align: middle;
        display: inline-block;
@@ -198,7 +329,9 @@ footer {
   main {
     #destacados{
       text-align: center;
-      display:flex;
+
+
+
     }
 
     // CSS HOVER EXTRAIDO DE PROYECTO DE EJEMPLO DE W3SCHOOLS, EDITADO para
@@ -211,6 +344,7 @@ footer {
 
     .contenedor {
       position: relative;
+      width:100%;
 
     }
 
@@ -219,7 +353,7 @@ footer {
       margin:0;
       opacity:1;
       display:block;
-      width:inherit;
+      width:100%;
       height: auto;
       transition: opacity .5s ease;
       backface-visibility: hidden;
@@ -237,7 +371,7 @@ footer {
       transform: translate(-15px,-5px);
       -ms-transform: translate(-15px,-5px);
       img {
-        height: 19em;
+        height: 20em;
       }
   }
 
@@ -250,12 +384,10 @@ footer {
       filter:blur(0);
     }
 
-    @keyframes moveIn {
-
-    }
   }
 
 
+}
 }
 
 // MOBILE
@@ -267,6 +399,8 @@ footer {
 
   //HEADER MOBILE
    header {
+
+
      #cintillo {
        height:160px;
      }
@@ -305,8 +439,9 @@ footer {
           height:80px;
           padding:0.8em 0em 0;
           margin:0;
+          display:block;
 
-              // Configuración horizontal del Slider para evitar que se amontonen y el overflow sea efectivo
+              // Configuración horizontal del grid para el menú de compra online para evitar que se amontonen y el overflow sea efectivo
           [class*="col-"] {
             text-align: center;
             float:none;
@@ -321,18 +456,13 @@ footer {
 
         }
       }
-
       // MAIN MOBILE
       main {
         #destacados {
           display: inherit;
             }
       }
-
 }
-
-
-
 
 footer {
   width:inherit;
@@ -354,7 +484,6 @@ footer {
       font-size: $fontsize-footer-detalle;
     }
 }
-
 
 .container {
   width:100%;
