@@ -8,6 +8,7 @@
         <link href="css/estilo.css" rel="stylesheet" />
         <!-- SCRIPTS EXTERNOS -->
         <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
+
   </head>
   <!-- MAQUETACION HTML PROCURANDO SEGUIR ESTÁNDARES HTML5 DE W3C -->
   <body>
@@ -25,37 +26,51 @@
               <span id="" class="col-1"><img src="./img/desktop/iconos-compra-online/icon8.png" /></span>
         </nav>
         <div id="slider">
+<!-- CODIGO DE PRUEBA W3SCHOOLS -->
+          <div class="slideshow-contenedor">
+            <div class="titular fade">
+              <img src="./img/desktop/slider/slide1/bg-slide1.png" style="width:100%">
+              <div class="slideshow-contenido">
 
-          <div class="slideshow-container">
-            <div class="mySlides fade">
-              <div class="numbertext">1 / 3</div>
-              <img src="img1.jpg" style="width:100%">
-              <div class="text">Caption Text</div>
+
+              </div>
             </div>
 
-            <div class="mySlides fade">
-              <div class="numbertext">2 / 3</div>
-              <img src="img2.jpg" style="width:100%">
-              <div class="text">Caption Two</div>
+            <div class="titular fade">
+              <img src="./img/desktop/slider/slide2/bg-slide2.png" style="width:100%">
+              <div class="slideshow-contenido">
+
+
+              </div>
             </div>
 
-            <div class="mySlides fade">
-              <div class="numbertext">3 / 3</div>
-              <img src="img3.jpg" style="width:100%">
-              <div class="text">Caption Three</div>
+            <div class="titular fade">
+              <img src="./img/desktop/slider/slide3/bg-slide3.png" style="width:100%">
+              <div class="slideshow-contenido">
+
+
+              </div>
             </div>
 
-            <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
-            <a class="next" onclick="plusSlides(1)">&#10095;</a>
+            <div class="titular fade">
+              <img src="./img/desktop/slider/slide4/bg-slide4.png" style="width:100%">
+              <div class="slideshow-contenido">
+
+              </div>
+            </div>
+
+            <a class="anterior" onclick="sumarIndex(-1)">&#10094;</a>
+            <a class="siguiente" onclick="sumarIndex(1)">&#10095;</a>
+            <div id="menu-slider-indice">
+              <div class="menu-elemento" onclick="titularActual(1)">VUELVEN<br /> LOS FRESCOS</div>
+              <div class="menu-elemento" onclick="titularActual(2)">OFERTA<br />3x2</div>
+              <div class="menu-elemento" onclick="titularActual(3)">OFERTA<br /> EROSKI ELECTRONICA</div>
+              <div class="menu-elemento" onclick="titularActual(4)">EXCELENCIA EN MARCAS UNIKAS</div>
+            </div>
           </div>
-          <br>
 
-          <div style="text-align:center">
-            <span class="dot" onclick="currentSlide(1)"></span>
-            <span class="dot" onclick="currentSlide(2)"></span>
-            <span class="dot" onclick="currentSlide(3)"></span>
-          </div>
 
+<!-- -->
 
         </div>
         <div id="cintillo" class="row">
@@ -116,7 +131,7 @@
             $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
             $(destacado1).html("<h2>Alimentación Saludable</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
             $(destacado2).html("<h2>Productos Locales</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
-            $(slider).html("Prueba Desktop");
+            //$(slider).html("Prueba Desktop");
             $(destacados).addClass("destacados-flex");
           }
           // 2. Mobile
@@ -128,8 +143,32 @@
             $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><span class='cintillo-img' ><img src='./img/mobile/cintillo/50.png' /></span>");
             $(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/mobile/destacados/img-destacado1.png' />");
             $(destacado2).html("<h2>Productos Locales</h2><img src='./img/mobile/destacados/img-destacado2.png' />")
-            $(slider).html("Prueba Desktop");
+            //$(slider).html("Prueba Desktop");
           }
+
+
+          // INICIO DEL slideShow
+          // CODIGO DE w3SCHOOLS adaptado al portal
+          var titularIndex = 0;
+          mostrarTitular();
+
+          function mostrarTitular() {
+              var i;
+              var titulares = document.getElementsByClassName("titular");
+              var elementos = document.getElementsByClassName("menu-elemento")
+              for (i = 0; i < titulares.length; i++) {
+                  titulares[i].style.display = "none";
+              }
+              for (i = 0; i < elementos.length; i++) {
+                  elementos[i].className = elementos[i].className.replace(" active", "");
+              }
+              titularIndex++;
+              if (titularIndex > titulares.length) {titularIndex = 1}
+              titulares[titularIndex-1].style.display = "flex";
+              elementos[titularIndex-1].className += " active";
+              setTimeout(mostrarTitular, 6000); // Change image every 2 seconds
+          }
+
 
         };
 
@@ -184,5 +223,6 @@
         $(window).resize(cambioResolucion);
 
       </script>
+      <script src="js/slideShow.js" type="text/javascript"></script>
   </body>
 </html>

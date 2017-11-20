@@ -67,7 +67,11 @@
 
 body {
   margin: auto;
-  font-family: AvantGardeStd; }
+  font-family: AvantGardeStd;
+  /* Contenedor slideshow */
+  /* Botones anterior y siguiente */
+  /* Position the "next button" to the right */
+  /* Fading animation */ }
   body h2 {
     text-align: center;
     font-size: 32px;
@@ -83,7 +87,16 @@ body {
       border-top: 1px solid black; }
     body header #slider {
       clear: both;
-      float: left; }
+      float: left;
+      position: relative; }
+    body header #menu-slider-indice {
+      position: absolute;
+      width: 100%;
+      height: 80px;
+      bottom: 0;
+      text-align: center;
+      background: rgba(0, 0, 0, 0.5);
+      /* Black background with 0.5 opacity */ }
   body #cintillo {
     background: #fec701; }
     body #cintillo #cintillo-left .cintillo-descuento {
@@ -115,6 +128,82 @@ body {
         width: 100%; }
   body footer {
     clear: both; }
+  body .slideshow-contenedor {
+    width: 100%;
+    position: relative;
+    margin: 0 auto; }
+    body .slideshow-contenedor .slideshow-contenido {
+      position: absolute;
+      /* Position the background text */
+      width: 100%;
+      bottom: 0;
+      /* At the bottom. Use top:0 to append it to the top */
+      background: rgba(0, 0, 0, 0.5);
+      /* Black background with 0.5 opacity */
+      color: #f1f1f1;
+      /* Grey text */
+      width: 100%;
+      /* Full width */ }
+      body .slideshow-contenedor .slideshow-contenido h2 {
+        margin: 0;
+        padding: 0; }
+  body .titular {
+    display: none; }
+  body .anterior, body .siguiente {
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    width: auto;
+    margin-top: -22px;
+    padding: 16px;
+    color: white;
+    font-weight: bold;
+    font-size: 18px;
+    transition: 0.6s ease;
+    border-radius: 0 3px 3px 0; }
+  body .siguiente {
+    right: 0;
+    border-radius: 3px 0 0 3px; }
+  body .anterior:hover, body .siguiente:hover {
+    background-color: rgba(0, 0, 0, 0.8); }
+  body .menu-slide {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease; }
+  body .menu-elemento {
+    font-size: 12px;
+    font-weight: 400;
+    color: #ffffff;
+    margin: 0.7em 0;
+    padding: 1.2em;
+    display: inline-block;
+    height: 60px;
+    width: 170px;
+    vertical-align: middle;
+    border: 2px solid #ffffff;
+    transition: background-color 0.6s ease; }
+  body .active, body .menu-elemento:hover {
+    background-color: #717171; }
+  body .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s; }
+@-webkit-keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
+@keyframes fade {
+  from {
+    opacity: .4; }
+  to {
+    opacity: 1; } }
   @media screen and (max-device-width: 1920px) {
     body body {
       max-width: 1280px; }
