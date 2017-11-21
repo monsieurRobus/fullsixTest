@@ -1,6 +1,7 @@
 #slider {
   clear: both;
-  float: left; }
+  float: left;
+  line-height: 2.6em; }
 
 #slider-responsive {
   bottom: 0; }
@@ -135,8 +136,7 @@
     margin: auto; }
     .contenedor-simple img {
       display: block;
-      width: 100%;
-      opacity: 0.6; }
+      width: 100%; }
     .contenedor-simple .contenido {
       position: absolute;
       top: 40%;
@@ -175,9 +175,14 @@
     #slide01mob h2, #slide01mob span {
       text-align: left; }
 
-  #slide02mob {
-    margin: 1em 0 0 0; }
-    #slide02mob h2, #slide02mob span {
-      text-align: left; } }
+  #slide02mob h2, #slide02mob span {
+    margin: 0;
+    text-align: left; }
+  #slide02mob h2 {
+    margin: 0;
+    display: block; }
+  #slide02mob span {
+    margin: 0;
+    max-width: 100%; } }
 
 /*# sourceMappingURL=slider.css.map */
