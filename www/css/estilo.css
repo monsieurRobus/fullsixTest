@@ -68,6 +68,7 @@
 body {
   margin: auto;
   font-family: AvantGardeStd;
+  max-width: 1280px;
   /* Contenedor slideshow */
   /* Botones anterior y siguiente */
   /* Position the "next button" to the right */
@@ -92,7 +93,6 @@ body {
     body header #menu-slider-indice {
       position: absolute;
       width: 100%;
-      height: 80px;
       bottom: 0;
       text-align: center;
       background: rgba(0, 0, 0, 0.5);
@@ -129,26 +129,39 @@ body {
   body footer {
     clear: both; }
   body .slideshow-contenedor {
-    width: 100%;
     position: relative;
-    margin: 0 auto; }
+    width: 100%; }
     body .slideshow-contenedor .slideshow-contenido {
+      color: #f2f2f2;
+      font-size: 15px;
+      padding: 8px 12px 0 24%;
       position: absolute;
-      /* Position the background text */
-      width: 100%;
-      bottom: 0;
-      /* At the bottom. Use top:0 to append it to the top */
-      background: rgba(0, 0, 0, 0.5);
-      /* Black background with 0.5 opacity */
-      color: #f1f1f1;
-      /* Grey text */
-      width: 100%;
-      /* Full width */ }
-      body .slideshow-contenedor .slideshow-contenido h2 {
-        margin: 0;
-        padding: 0; }
+      bottom: 22.5%;
+      width: 100%; }
   body .titular {
-    display: none; }
+    margin: auto;
+    display: none;
+    position: relative;
+    /* Position the background text */ }
+    body .titular .img-fondo-slide {
+      display: block;
+      margin: auto;
+      width: 100%; }
+    body .titular h2, body .titular span {
+      margin: 0;
+      display: block;
+      width: inherit;
+      text-align: left; }
+    body .titular h2 {
+      line-height: 90%;
+      font-size: 40px; }
+    body .titular span {
+      padding: 0.7em 0 0;
+      font-size: 18px;
+      background-size: 1px 1em;
+      box-shadow: inset 0 -0.175em #ffffff, inset 0 -0.2em #000; }
+    body .titular img {
+      padding: 1em 0 0; }
   body .anterior, body .siguiente {
     cursor: pointer;
     position: absolute;
