@@ -131,6 +131,7 @@
     margin: 10px; } }
 @media screen and (max-width: 480px) {
   .contenedor-simple {
+    overflow: hidden;
     position: relative;
     max-width: 480px;
     margin: auto; }
@@ -138,8 +139,9 @@
       display: block;
       width: 100%; }
     .contenedor-simple .contenido {
+      margin: auto;
       position: absolute;
-      top: 40%;
+      top: 30%;
       left: 50%;
       transform: translate(-50%, -50%);
       color: #f1f1f1;
@@ -167,7 +169,6 @@
       .contenedor-simple .contenido .titulo-mb h2 {
         font-size: 40px; }
       .contenedor-simple .contenido .titulo-mb span {
-        margin: -1em 0 0 0;
         font-size: 18px; }
 
   #slide01mob {
@@ -175,6 +176,8 @@
     #slide01mob h2, #slide01mob span {
       text-align: left; }
 
+  #slide02mob .contenido {
+    margin: 1em 0 0 0; }
   #slide02mob h2, #slide02mob span {
     margin: 0;
     text-align: left; }

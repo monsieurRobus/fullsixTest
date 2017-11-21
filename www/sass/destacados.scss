@@ -1,0 +1,40 @@
+// CARGA DE VARIABLES
+// VARIABLES RESPONSIVE
+$break-mb: 480px;
+$break-dt: 1920px;
+
+// VARIABLES FUENTES
+@import "tamaniofuentes";
+
+
+@media screen and (min-width: $break-mb) and (max-width: $break-dt){
+
+}
+@media screen and (max-width: $break-mb){
+
+
+  #destacado1 {
+
+
+  }
+
+  #destacado2 {
+
+  }
+  .text-over {
+    background: rgba(70,200,70,0.6);
+    color:#f2f2f2;
+    width:100%;
+    font-size: $fontsize-destacados-detalle;
+  }
+  .contenido {
+    position: absolute;
+    text-align: center;
+    bottom:0;    
+    left:50%;
+    transform: translate( -50%, -50% );
+    color: #f2f2f2;
+    padding: 20px; /* Some padding */
+  }
+
+}
