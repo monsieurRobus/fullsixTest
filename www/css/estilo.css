@@ -19,7 +19,6 @@
 
 .row {
   width: 100%;
-  content: "";
   clear: both;
   display: table; }
 
@@ -68,11 +67,7 @@
 body {
   margin: auto;
   font-family: AvantGardeStd;
-  max-width: 1280px;
-  /* Contenedor slideshow */
-  /* Botones anterior y siguiente */
-  /* Position the "next button" to the right */
-  /* Fading animation */ }
+  max-width: 1280px; }
   body h2 {
     text-align: center;
     font-size: 32px;
@@ -82,21 +77,16 @@ body {
   body .logo-mobile {
     text-align: center;
     margin: 1em 2em 1em 0; }
+  body .destacado {
+    width: 100%;
+    height: 100%; }
+  body .contenedor {
+    position: relative;
+    width: 100%; }
   body header {
     padding: 0; }
     body header #navegacion {
       border-top: 1px solid black; }
-    body header #slider {
-      clear: both;
-      float: left;
-      position: relative; }
-    body header #menu-slider-indice {
-      position: absolute;
-      width: 100%;
-      bottom: 0;
-      text-align: center;
-      background: rgba(0, 0, 0, 0.5);
-      /* Black background with 0.5 opacity */ }
   body #cintillo {
     background: #fec701; }
     body #cintillo #cintillo-left .cintillo-descuento {
@@ -128,96 +118,7 @@ body {
         width: 100%; }
   body footer {
     clear: both; }
-  body .slideshow-contenedor {
-    position: relative;
-    width: 100%; }
-    body .slideshow-contenedor .slideshow-contenido {
-      color: #f2f2f2;
-      font-size: 15px;
-      padding: 8px 12px 0 24%;
-      position: absolute;
-      bottom: 22.5%;
-      width: 100%; }
-  body .titular {
-    margin: auto;
-    display: none;
-    position: relative;
-    /* Position the background text */ }
-    body .titular .img-fondo-slide {
-      display: block;
-      margin: auto;
-      width: 100%; }
-    body .titular h2, body .titular span {
-      margin: 0;
-      display: block;
-      width: inherit;
-      text-align: left; }
-    body .titular h2 {
-      line-height: 90%;
-      font-size: 40px; }
-    body .titular span {
-      padding: 0.7em 0 0;
-      font-size: 18px;
-      background-size: 1px 1em;
-      box-shadow: inset 0 -0.175em #ffffff, inset 0 -0.2em #000; }
-    body .titular img {
-      padding: 1em 0 0; }
-  body .anterior, body .siguiente {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    width: auto;
-    margin-top: -22px;
-    padding: 16px;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    transition: 0.6s ease;
-    border-radius: 0 3px 3px 0; }
-  body .siguiente {
-    right: 0;
-    border-radius: 3px 0 0 3px; }
-  body .anterior:hover, body .siguiente:hover {
-    background-color: rgba(0, 0, 0, 0.8); }
-  body .menu-slide {
-    cursor: pointer;
-    height: 15px;
-    width: 15px;
-    margin: 0 2px;
-    background-color: #bbb;
-    border-radius: 50%;
-    display: inline-block;
-    transition: background-color 0.6s ease; }
-  body .menu-elemento {
-    font-size: 12px;
-    font-weight: 400;
-    color: #ffffff;
-    margin: 0.7em 0;
-    padding: 1.2em;
-    display: inline-block;
-    height: 60px;
-    width: 170px;
-    vertical-align: middle;
-    border: 2px solid #ffffff;
-    transition: background-color 0.6s ease; }
-  body .active, body .menu-elemento:hover {
-    background-color: #717171; }
-  body .fade {
-    -webkit-animation-name: fade;
-    -webkit-animation-duration: 1.5s;
-    animation-name: fade;
-    animation-duration: 1.5s; }
-@-webkit-keyframes fade {
-  from {
-    opacity: .4; }
-  to {
-    opacity: 1; } }
-@keyframes fade {
-  from {
-    opacity: .4; }
-  to {
-    opacity: 1; } }
-  @media screen and (max-device-width: 1920px) {
+  @media screen and (min-width: 480px) and (max-width: 1920px) {
     body body {
       max-width: 1280px; }
     body header #navegacion {
@@ -241,12 +142,6 @@ body {
       display: inline-block; }
     body main #destacados {
       text-align: center; }
-    body main .destacado {
-      width: 100%;
-      height: 100%; }
-    body main .contenedor {
-      position: relative;
-      width: 100%; }
     body main .imghover {
       padding: 0;
       margin: 0;
@@ -275,7 +170,7 @@ body {
       opacity: 1;
       filter: blur(0); } }
 
-@media screen and (max-device-width: 480px) {
+@media screen and (max-width: 480px) {
   body {
     max-width: 480px; }
 

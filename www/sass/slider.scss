@@ -1,0 +1,279 @@
+// CARGA DE VARIABLES
+// VARIABLES RESPONSIVE
+$break-mb: 480px;
+$break-dt: 1920px;
+
+// VARIABLES FUENTES
+@import "tamaniofuentes";
+// CSS PARA EL slideshow
+
+  #slider {
+    clear:both;
+    float:left;
+  }
+
+  #slider-responsive{
+    bottom:0;
+  }
+
+
+
+    // RESPONSIVE DESKTOP
+@media screen and (min-width: $break-mb) and (max-width: $break-dt)
+
+{
+
+  #menu-slider-indice {
+    position:absolute;
+    width: 100%;
+    bottom:0;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.5);
+  }
+
+  .titulo-slider {
+    position:absolute;
+    margin: -1em 0;
+    padding: 2em 0.8em 0 1.4em ;
+    width:25%;
+    height:323px;
+    background: rgba(200,200,200,0.7);
+  }
+
+  // CONTENEDOR SLIDESHOW
+  .slideshow-contenedor {
+    position: relative;
+    width: 100%;
+      .slideshow-contenido{
+        color: #f2f2f2;
+        font-size: 15px;
+        padding: 1em 12px 0 24%;
+        position: absolute;
+        //bottom: 22.5%;
+        width: 100%;
+      }
+  }
+
+    // Botones anterior y siguiente
+    .anterior, .siguiente {
+      position: absolute;
+      top: 50%;
+      width: auto;
+      padding: 0;
+      transition: 0.6s ease;
+    }
+
+    .siguiente {
+      right: 0;
+      border-radius: 3px 0 0 3px;
+    }
+
+    // On hover, add a black background color with a little bit see-through
+    .anterior:hover, .siguiente:hover {
+      background-color: rgba(255,255,255,0.8);
+    }
+  // ESTILOS CSS GENÉRICOS PARA EL INTERIOR DE CADA slide
+  .titular {
+          margin:auto;
+          display: none;
+          //position: relative; /* Position the background text */
+          .img-fondo-slide{
+            display:block;
+            margin:auto;
+            width:100%;
+            opacity: 0.6;
+          }
+          h2,span{
+            margin:0;
+            display:block;
+            width:inherit;
+            text-align:left;
+          }
+          h2 {
+            line-height: 90%;
+            font-size: $fontsize-slider-title;
+          }
+          span{
+            padding: 0.7em 0 0;
+            font-size: $fontsize-slider-links;
+          }
+          .img-detalle {
+            padding: 1em 0 0;
+          }
+
+          a {
+            color:#f2f2f2;
+            text-decoration: none;
+            border-bottom:2px solid #f2f2f2;
+          }
+
+          a::after {
+            margin:0 0 0 10px;
+            color: #f2f2f2;
+            content: url("./../img/desktop/cintillo/flecha.png");
+            position:absolute;
+            border-bottom: 0;
+          }
+  }
+
+  // CADA UNO DE LOS ELEMENTOS DEL MENU
+  .menu-slide {
+    cursor:pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+  }
+
+  .menu-elemento {
+    font-size: $fontsize-slider-carrusel;
+    font-weight: 400;
+    color: #ffffff;
+    margin:0.7em 0;
+    padding:1.2em;
+    display:inline-block;
+    height: 60px;
+    width: 170px;
+    vertical-align: middle;
+    border: 2px solid #ffffff;
+    transition: background-color 0.6s ease;
+  }
+
+  .active, .menu-elemento:hover {
+    background-color: #717171;
+  }
+
+  /* Fading animation */
+  .fade {
+    -webkit-animation-name: fade;
+    -webkit-animation-duration: 1.5s;
+    animation-name: fade;
+    animation-duration: 1.5s;
+  }
+
+  @-webkit-keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+  @keyframes fade {
+    from {opacity: .4}
+    to {opacity: 1}
+  }
+
+
+  // CSS CUSTOMIZADO PARA LAS 4 IMAGENES DE SLIDER ACTUALES, AQUÍ HAY QUE HACER
+  // LAS MODIFICACIONES CUANDO SE QUIERAN CAMBIAR LAS IMAGENES Y CONTENIDOS
+  // DE ESTA SECCION
+  #slide01{
+    // Ninguna customización
+  }
+
+  #slide02{
+    #botellas,#oferta{
+      margin: -1em 0;
+    }
+  }
+
+  #slide03,#slide04{
+    h2,span {
+      width: 100%;
+      line-height: 100%;
+    }
+    // Ajuste manual para coincidir con flecha
+    span{
+      margin:10px;
+    }
+  }
+}
+// RESPONSIVE MOBILE
+@media screen and (max-width: $break-mb)
+{
+
+  .contenedor-simple {
+    position: relative;
+    max-width: 480px;
+    margin: auto;
+
+    // imagen de fondo
+    img {
+      display:block;
+      width:100%;
+      opacity: 0.6;
+    }
+
+
+    .contenido {
+      position: absolute;
+      top:40%;
+      left:50%;
+      transform: translate( -50%, -50% );
+      color: #f1f1f1; /* Grey text */
+      width: 100%; /* Full width */
+      padding: 20px; /* Some padding */
+
+      a {
+        color:#f2f2f2;
+        text-decoration: none;
+        border-bottom:2px solid #f2f2f2;
+      }
+
+      a::after {
+        margin:0 0 0 10px;
+        color: #f2f2f2;
+        content: url("./../img/desktop/cintillo/flecha.png");
+        position:absolute;
+        border-bottom: 0;
+      }
+
+      span,img {
+        display:block;
+        max-width: 40%;
+        text-align: left;
+      }
+
+      span {
+        padding: 0 0 1em 0 ;
+      }
+
+      .titulo-mb {
+
+
+
+        h2 {
+          font-size: $fontsize-slider-title;
+        }
+
+        span {
+          margin: -1em 0 0 0;
+          font-size: $fontsize-slider-links;
+        }
+      }
+
+    }
+
+
+  }
+
+  #slide01mob {
+    margin: 0 0 1em 0;
+    h2, span {
+      text-align: left;
+    }
+  }
+
+  #slide02mob {
+    margin: 1em 0 0 0;
+    h2, span {
+      text-align: left;
+    }
+  }
+
+
+
+
+
+}
