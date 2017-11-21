@@ -7,6 +7,7 @@
         <!-- ESTILOS CSS -->
         <link href="css/estilo.css" rel="stylesheet" />
         <link href="css/slider.css" rel="stylesheet" />
+        <link href="css/destacados.css" rel="stylesheet" />
         <!-- SCRIPTS EXTERNOS -->
         <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 
@@ -59,10 +60,15 @@
         </div>
       </header>
       <main>
-        <section id="destacados">
-          <div id="destacado1" class="destacado">
+        <section id="destacados" class="row contenedor">
+          <div id="destacado1" class="destacado contenedor col-12">
           </div>
-          <div id="destacado2" class="destacado">
+          <div id="destacado2" class="destacado contenedor col-12">
+            <h2>Productos Locales</h2>
+            <img src='./img/mobile/destacados/img-destacado2.png'>
+            <div class="contenido text-over">
+              ¡Ya está aquí la anchoa del Cantábrico!
+            </div>
           </div>
         </section>
         <section id="ventajas">
@@ -107,7 +113,7 @@
             $(navegacion).addClass("row");
             $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
             $(destacado1).html("<h2>Alimentación Saludable</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
-            $(destacado2).html("<h2>Productos Locales</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
+            //$(destacado2).html("<h2>Productos Locales</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
             //$(slider).html("Prueba Desktop");
             $(destacados).addClass("destacados-flex");
 
@@ -142,7 +148,7 @@
             $(cintilloRight).addClass('col-12');
             $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><span class='cintillo-img' ><img src='./img/mobile/cintillo/50.png' /></span>");
             $(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/mobile/destacados/img-destacado1.png' />");
-            $(destacado2).html("<h2>Productos Locales</h2><img src='./img/mobile/destacados/img-destacado2.png' />")
+            //$(destacado2).html("<h2>Productos Locales</h2><img src='./img/mobile/destacados/img-destacado2.png' />")
             //$(slider).html("Prueba Desktop");
           }
         };
@@ -173,7 +179,7 @@
                 $(cintilloRight).addClass('col-6').removeClass('col-12');
                 $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
                 $(destacado1).html("<h2>Alimentación Saludable</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
-                $(destacado2).html("<h2>Productos Locales</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
+                //$(destacado2).html("<h2>Productos Locales</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
                 $(destacados).addClass("destacados-flex");
               }
             }
@@ -189,7 +195,7 @@
               $(cintilloRight).addClass('col-12').removeClass('col-6');
               $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><span class='cintillo-img' ><img src='./img/mobile/cintillo/50.png' /></span>");
               $(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/mobile/destacados/img-destacado1.png' />");
-              $(destacado2).html("<h2>Productos Locales</h2><img src='./img/mobile/destacados/img-destacado2.png' />")
+              //$(destacado2).html("<h2>Productos Locales</h2><img src='./img/mobile/destacados/img-destacado2.png' />")
               $(destacados).removeClass("destacados-flex");
             }
           }

@@ -1,0 +1,7 @@
+{
+"version": 3,
+"mappings": "AAYA,oCAAwC;EAWtC,UAAW;IACT,UAAU,EAAE,sBAAmB;IAC/B,KAAK,EAAC,OAAO;IACb,KAAK,EAAC,IAAI;IACV,SAAS,ECnBmB,IAAI;;EDqBlC,UAAW;IACT,QAAQ,EAAE,QAAQ;IAClB,UAAU,EAAE,MAAM;IAClB,MAAM,EAAC,CAAC;IACR,IAAI,EAAC,GAAG;IACR,SAAS,EAAE,qBAAuB;IAClC,KAAK,EAAE,OAAO;IACd,OAAO,EAAE,IAAI;IAAE,kBAAkB",
+"sources": ["../sass/destacados.scss","../sass/_tamaniofuentes.scss"],
+"names": [],
+"file": "destacados.css"
+}
