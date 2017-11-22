@@ -1,0 +1,42 @@
+@media screen and (min-width: 481px) and (max-width: 1920px) {
+  #ventakas-desktop {
+    display: block;
+    visibility: visible; }
+
+  #ventajas-mobile {
+    display: none;
+    visibility: hidden; }
+
+  #ventajas-desktop, #ventajas-mobile {
+    visibility: hidden;
+    position: relative;
+    padding: 2em;
+    clear: both;
+    float: left;
+    height: 25em;
+    width: 100%; }
+
+  .ventajas {
+    position: absolute;
+    margin: 0 auto 0 auto;
+    top: 1em;
+    right: 0;
+    left: 0;
+    bottom: 1em;
+    background: #FF0000;
+    width: 90%;
+    height: 90%; } }
+@media screen and (max-width: 480px) {
+  #ventakas-desktop {
+    display: none;
+    visibility: hidden; }
+
+  #ventajas-mobile {
+    display: block;
+    visibility: visibiliy; }
+
+  .ventajas {
+    position: absolute;
+    background: #FF0000; } }
+
+/*# sourceMappingURL=ventajas.css.map */

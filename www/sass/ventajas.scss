@@ -1,0 +1,66 @@
+// CARGA DE VARIABLES
+// VARIABLES RESPONSIVE
+$break-mb: 480px;
+$break-mb2: 481px;
+$break-dt: 1920px;
+
+// VARIABLES FUENTES
+@import "tamaniofuentes";
+
+@media screen and (min-width: $break-mb2) and (max-width: $break-dt)
+{
+
+  #ventakas-desktop {
+    display:block;
+    visibility: visible;
+  }
+
+  #ventajas-mobile {
+    display:none;
+    visibility: hidden;
+  }
+
+
+  #ventajas-desktop,#ventajas-mobile {
+
+    visibility: hidden;
+    position:relative;
+    padding:2em;
+    clear:both;
+    float:left;
+    height:25em;
+    width:100%;
+  }
+
+  .ventajas {
+    position: absolute;
+    margin: 0 auto 0 auto;
+    top:1em;
+    right:0;
+    left:0;
+    bottom:1em;
+    background: #FF0000;
+    width:90%;
+    height:90%;
+  }
+
+}
+
+@media screen and (max-width: $break-mb)
+{
+  #ventakas-desktop {
+    display:none;
+    visibility: hidden;
+  }
+
+  #ventajas-mobile {
+    display:block;
+    visibility: visibiliy;
+  }
+
+  .ventajas {
+    position: absolute;
+    background: #FF0000;
+  }
+
+}

@@ -26,11 +26,13 @@ $break-dt: 1920px;
   #destacados-desktop {
     visibility: visible;
     display: block;
+    clear:both;
   }
 
   #destacados-mobile {
     visibility: hidden;
     display: none;
+    clear:both;
 }
 
 .destacado {

@@ -5,10 +5,11 @@
         <meta charset="UTF-8" />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <!-- ESTILOS CSS -->
-        <link href="css/estilo.css" rel="stylesheet" />
-        <link href="css/slider.css" rel="stylesheet" />
-        <link href="css/destacados.css" rel="stylesheet" />
-        <link href="css/grid.css" rel="stylesheet" />
+        <link href="css/estilo.css" rel="stylesheet">
+        <link href="css/slider.css" rel="stylesheet">
+        <link href="css/destacados.css" rel="stylesheet">
+        <link href="css/ventajas.css" rel="stylesheet">
+        <link href="css/grid.css" rel="stylesheet">
         <!-- SCRIPTS EXTERNOS -->
         <script src="js/jquery-3.2.1.min.js" type="text/javascript"></script>
 
@@ -16,8 +17,13 @@
   <!-- MAQUETACION HTML PROCURANDO SEGUIR ESTÁNDARES HTML5 DE W3C -->
   <body>
       <header>
-        <div id="logo"></div>
-        <nav id="navegacion" class="scroll">
+        <div id="logo-desktop" class="logo-desktop">
+          <img alt="Logo Eroski" src="./img/desktop/logo-eroski.png" />
+        </div>
+        <div id="logo-mobile" class="logo-mobile">
+          <img alt="Logo Eroski Mobile" src="./img/mobile/logo-eroski-mobile.png" />
+        </div>
+        <nav id="navegacion-desktop" class="scroll row">
               <span class="col-3 titulo-nav"><span>Compra online</span></span>
               <span id="super" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon1.png" /></span>
               <span id="electronica" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon2.png" /></span>
@@ -28,6 +34,18 @@
               <span id="viajes" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon7.png" /></span>
               <span id="seguros" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon8.png" /></span>
         </nav>
+        <nav id="navegacion-mobile" class="scroll">
+              <span class="col-3 titulo-nav"><span>Compra online</span></span>
+              <span id="super" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon1.png" /></span>
+              <span id="electronica" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon2.png" /></span>
+              <span id="electro-hogar" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon3.png" /></span>
+              <span id="descanso" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon4.png" /></span>
+              <span id="jardin" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon5.png" /></span>
+              <span id="movil" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon6.png" /></span>
+              <span id="viajes" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon7.png" /></span>
+              <span id="seguros" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon8.png" /></span>
+        </nav>
+      </div>
         <div id="slider" class="contenedor row">
           <!-- SECCION SLIDER DESKTOP -->
               <div id="slider-responsive-desktop">
@@ -96,27 +114,40 @@
                   <h2 class="">DISFRUTA DE NUESTRAS OFERTAS CONEKTA</h2>
                   <span class=""><a href="#">Ver todas nuestras ofertas</a></span>
                 </div>
-
               </div>
             </div>
           </div>
           <!-- -->
         </div>
-        <div id="cintillo" class="row">
-          <div id="cintillo-left">
+        <div id="cintillo-desktop" class="row">
+          <!-- CINTILLO DESKTOP -->
+          <div id="cintillo-left" class="col-6">
+            <span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span>
+            <img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>
           </div>
-          <div id="cintillo-right">
+          <div id="cintillo-right" class="col-6">
             <span class="cintillo-link">Ahorra ya <img alt="Flecha" src="./img/desktop/cintillo/flecha.png"</span>
           </div>
+          <!-- -->
+        </div>
+        <div id="cintillo-mobile" class="row">
+          <!-- CINTILLO MOBILE -->
+          <div id="cintillo-left" class="col-12">
+            <span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span>
+            <span class='cintillo-img' ><img src='./img/mobile/cintillo/50.png' /></span>
+          </div>
+          <div id="cintillo-right" class="col-12">
+            <span class="cintillo-link">Ahorra ya <img alt="Flecha" src="./img/desktop/cintillo/flecha.png"</span>
+          </div>
+          <!-- -->
         </div>
       </header>
       <main>
-
         <section id="destacados-desktop" class="row destacados-flex">
-          <!-- VERSION DESKTOP -->
+          <!-- DESTACADOS DESKTOP -->
             <div id="destacado1" class="destacado contenedor col-6">
               <h2>Alimentación Saludable</h2>
-              <div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'>
+              <div class=''><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'>
                 <div class='leyenda'>
                   <img src='./img/desktop/destacados/rollover-destacado.png' >
                 </div>
@@ -124,9 +155,10 @@
             </div>
             <div id="destacado2" class="destacado contenedor col-6">
               <h2>Productos Locales</h2>
-              <div class='contenedor'>
+              <div>
                 <img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'>
-                <div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' >
+                <div class='leyenda text-over'>
+                  <img src='./img/desktop/destacados/rollover-destacado.png' >
                 </div>
               </div>
             </div>
@@ -147,10 +179,20 @@
             </div>
           </div>
         </section>
-        <section id="ventajas">
+        <section id="ventajas-desktop">
+          <!-- VENTAJAS DESKTOP -->
+          <div class="ventajas">
 
+          </div>
+          <!-- -->
         </section>
+        <section id="ventajas-mobile">
+          <!-- VENTAJAS MOBILE -->
+          <div class="ventajas">
 
+          </div>
+          <!-- -->
+        </section>
       </main>
       <footer>
           <span class="footer-telefono">944 943 444</span>
@@ -158,44 +200,19 @@
           <span class="footer-horario">9:00 a 22:00</span>
         </footer>
       <script>
+
         var anchoDesktop = 480;   // Ancho a partir del cual cambiamos de mobile a Desktop
         var anchoVentana = window.innerWidth;
-        var divLogo = document.getElementById("logo");
-        var cintillo50p = document.getElementById("cintillo-50p");
-        var cintilloRight = document.getElementById("cintillo-right");
-        var cintilloLeft = document.getElementById("cintillo-left");
-        var navegacion = document.getElementById("navegacion");
-        var menu = document.getElementById("menu");
-        var slider = document.getElementById("slider");
-        var destacados = document.getElementById("destacados");
-        var destacado1 = document.getElementById("destacado1");
-        var destacado2 = document.getElementById("destacado2");
 
 
         // Una vez el documento esté preparado, procedemos a realizar la carga de página correspondiente.
         var setupInicial = function(){
 
-          // LOGO
-          // En función del ancho de ventana cargará la imagen que corresponda en el div del logo,
-          // dependiendo de si entramos desde mobile o desktop.
 
           // 1. Desktop
           if (anchoVentana >= anchoDesktop) {
 
-            $(divLogo).html('<img alt="Logo Eroski" src="./img/desktop/logo-eroski.png" />');
-            $(divLogo).addClass('logo-desktop');   // Asignamos la clase correspondiente a la imagen
-            $(cintilloLeft).addClass('col-6');
-            $(cintilloRight).addClass('col-6');
-            $(navegacion).addClass("row");
-            $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
-            //$(destacado1).html("");
-            //$(destacado2).html("<h2>Productos Locales</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
-
-            //$(destacados).addClass("destacados-flex");
-
-
             // INICIO DEL slideShow
-            // CODIGO DE w3SCHOOLS adaptado al portal
             var titularIndex = 0;
             mostrarTitular();
 
@@ -216,69 +233,13 @@
                 setTimeout(mostrarTitular, 150000); // Change image every 2 seconds
             }
           }
-          // 2. Mobile
-          else {
-            $(divLogo).html('<img alt="Logo Eroski Mobile" src="./img/mobile/logo-eroski-mobile.png" />');
-            $(divLogo).addClass('logo-mobile');
-            $(cintilloLeft).addClass('col-12');
-            $(cintilloRight).addClass('col-12');
-            $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><span class='cintillo-img' ><img src='./img/mobile/cintillo/50.png' /></span>");
-            //$(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/mobile/destacados/img-destacado1.png' />");
-            //$(destacado2).html("<h2>Productos Locales</h2><img src='./img/mobile/destacados/img-destacado2.png' />")
-
-          }
         };
 
-        // RESIZE
-        // Esta función se encarga de realizar los cambios pertinentes en la página una vez se detecta
-        // el paso de una resolución a otra.
-        // Se ha procurado que solo se ejecute el código una vez por cada cambio de resolución.
-
-
-        var cambioResolucion = function(){
-
-          //
-          var anchoVentana = window.innerWidth;
-
-          // 1. Mobile - Desktop
-          if (anchoVentana >= anchoDesktop) {
-
-            // HEADER
-            $(divLogo).html('<img alt="Logo Eroski" src="./img/desktop/logo-eroski.png" />');
-              if ($(divLogo).hasClass('logo-mobile'))
-              {
-                $(divLogo).html('<img alt="Logo Eroski" src="./img/desktop/logo-eroski.png" />');
-                $(divLogo).addClass('logo-desktop').removeClass('logo-mobile');   // Asignamos la clase correspondiente a la imagen
-                $(cintilloLeft).addClass('col-6').removeClass('col-12');
-                $(cintilloRight).addClass('col-6').removeClass('col-12');
-                $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><img class='cintillo-img' src='./img/desktop/cintillo/50.png'/>");
-                $(destacado1).html("<h2>Alimentación Saludable</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
-                //$(destacado2).html("<h2>Productos Locales</h2><div class='contenedor'><img src='./img/desktop/destacados/imagen-destacado2.png' class='imghover'/><div class='leyenda'><img src='./img/desktop/destacados/rollover-destacado.png' /></div></div>");
-                $(destacados).addClass("destacados-flex");
-              }
-            }
-
-          // 2. Desktop - Mobile
-          else {
-            // HEADER
-            if ($(divLogo).hasClass('logo-desktop'))
-            {
-              $(divLogo).html('<img alt="Logo Eroski Mobile" src="./img/mobile/logo-eroski-mobile.png" />');
-              $(divLogo).addClass('logo-mobile').removeClass('logo-desktop');   // Asignamos la clase correspondiente a la imagen
-              $(cintilloLeft).addClass('col-12').removeClass('col-6');
-              $(cintilloRight).addClass('col-12').removeClass('col-6');
-              $(cintilloLeft).html("<span class='cintillo-descuento'>de descuento en tus 3 primeras compras desde 100&euro;</span><span class='cintillo-img' ><img src='./img/mobile/cintillo/50.png' /></span>");
-              $(destacado1).html("<h2>Alimentación Saludable</h2><img src='./img/mobile/destacados/img-destacado1.png' />");
-              //$(destacado2).html("<h2>Productos Locales</h2><img src='./img/mobile/destacados/img-destacado2.png' />")
-              $(destacados).removeClass("destacados-flex");
-            }
-          }
-        };
         $(document).ready(setupInicial);
-        $(window).resize(cambioResolucion);
 
       </script>
       <script src="js/slideShow.js" type="text/javascript"></script>
       <script src="js/resizeIconos.js" type="text/javascript"></script>
+      <script src="js/ventajas.js" type="text/javascript"></script>
   </body>
 </html>

@@ -38,23 +38,24 @@ body {
     position: relative; }
   body header {
     padding: 0; }
-    body header #navegacion {
+    body header #navegacion-desktop, body header #navegacion-mobile {
+      text-align: center;
       border-top: 1px solid black; }
-  body #cintillo {
+  body #cintillo-desktop, body #cintillo-mobile {
     background: #fec701; }
-    body #cintillo #cintillo-left .cintillo-descuento {
+    body #cintillo-desktop #cintillo-left .cintillo-descuento, body #cintillo-mobile #cintillo-left .cintillo-descuento {
       float: right;
       display: inline-block;
       font-weight: 100;
       text-align: left;
       font-size: 16px; }
-    body #cintillo #cintillo-left .cintillo-img {
+    body #cintillo-desktop #cintillo-left .cintillo-img, body #cintillo-mobile #cintillo-left .cintillo-img {
       display: inline-block; }
-    body #cintillo #cintillo-right {
+    body #cintillo-desktop #cintillo-right, body #cintillo-mobile #cintillo-right {
       text-align: left;
       font-weight: 300;
       font-size: 18px; }
-      body #cintillo #cintillo-right .cintillo-link {
+      body #cintillo-desktop #cintillo-right .cintillo-link, body #cintillo-mobile #cintillo-right .cintillo-link {
         float: left;
         height: inherit;
         width: inherit;
@@ -64,11 +65,29 @@ body {
   @media screen and (min-width: 481px) and (max-width: 1920px) {
     body body {
       max-width: 1280px; }
-    body header #navegacion {
+    body #logo-desktop {
+      display: block;
+      visibility: visible; }
+    body #logo-mobile {
+      display: none;
+      visibility: hidden; }
+    body #navegacion-desktop {
+      display: block;
+      visibility: visible; }
+    body #navegacion-mobile {
+      display: none;
+      visibility: hidden; }
+    body #cintillo-desktop {
+      display: table;
+      visibility: visible; }
+    body #cintillo-mobile {
+      display: none;
+      visibility: hidden; }
+    body header #navegacion-desktop, body header #navegacion-mobile {
       float: left;
       clear: both;
       padding: 1em 0 1em; }
-      body header #navegacion .titulo-nav {
+      body header #navegacion-desktop .titulo-nav, body header #navegacion-mobile .titulo-nav {
         padding: 1em 0 1em 1.3em; }
     body header #cintillo-left .cintillo-descuento {
       padding: 0.5em;
@@ -119,7 +138,31 @@ body {
   body {
     max-width: 480px; }
 
-  header #cintillo {
+  #logo-desktop {
+    display: none;
+    visibility: hidden; }
+
+  #logo-mobile {
+    display: block;
+    visibility: visible; }
+
+  #navegacion-desktop {
+    display: none;
+    visibility: hidden; }
+
+  #navegacion-mobile {
+    display: block;
+    visibility: visible; }
+
+  #cintillo-desktop {
+    display: none;
+    visibility: hidden; }
+
+  #cintillo-mobile {
+    display: table;
+    visibility: visible; }
+
+  header #cintillo-mobile {
     height: 160px; }
   header #cintillo-left {
     height: 80px;
@@ -143,18 +186,17 @@ body {
     overflow-x: scroll;
     -webkit-overflow-scrolling: touch;
     -ms-overflow-style: -ms-autohiding-scrollbar; }
-  header #navegacion {
+  header #navegacion-desktop, header #navegacion-mobile {
     height: 80px;
     padding: 0.8em 0em 0;
-    margin: 0;
-    display: block; }
-    header #navegacion [class*="col-"] {
+    margin: 0; }
+    header #navegacion-desktop [class*="col-"], header #navegacion-mobile [class*="col-"] {
       text-align: center;
       float: none;
       width: 5em;
       vertical-align: middle;
       display: inline-block; }
-    header #navegacion .titulo-nav {
+    header #navegacion-desktop .titulo-nav, header #navegacion-mobile .titulo-nav {
       display: none; } }
 footer {
   width: inherit;

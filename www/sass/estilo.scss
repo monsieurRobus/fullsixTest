@@ -49,9 +49,7 @@ h2 {
   font-weight: 400;
 }
 
-#logo {
 
-}
 
 .logo-desktop {
   margin: 2em 0 0.5em 4em;
@@ -71,15 +69,15 @@ header {
 
   padding: 0;
 
-  #navegacion {
-
+  #navegacion-desktop,#navegacion-mobile {
+    text-align: center;
     border-top: 1px solid black;
     }
 
-    
+
   }
 
-  #cintillo {
+  #cintillo-desktop,#cintillo-mobile {
     background: #fec701;
 
     #cintillo-left {
@@ -123,9 +121,42 @@ footer {
     max-width: 1280px;
   }
 
+  // VISIBILIDAD DE LOGOS
+  #logo-desktop{
+    display:block;
+    visibility: visible;
+  }
+
+  #logo-mobile {
+    display:none;
+    visibility: hidden;
+  }
+
+  // VISIBILIDAD DE NAVEGACION
+  #navegacion-desktop {
+    display:block;
+    visibility: visible;
+  }
+
+  #navegacion-mobile {
+    display:none;
+    visibility: hidden;
+  }
+
+  // VISIBILIDAD DE CINTILLO
+  #cintillo-desktop {
+    display:table;
+    visibility: visible;
+  }
+
+  #cintillo-mobile {
+    display:none;
+    visibility: hidden;
+  }
+
   // HEADER DESKTOP
   header {
-    #navegacion {
+    #navegacion-desktop,#navegacion-mobile {
       float:left;
       clear:both;
       padding:1em 0 1em;
@@ -196,6 +227,7 @@ footer {
       img {
         height: 20em;
       }
+
   }
 
     .contenedor:hover .imghover {
@@ -206,10 +238,7 @@ footer {
       opacity: 1;
       filter:blur(0);
     }
-
   }
-
-
 }
 }
 
@@ -220,11 +249,43 @@ footer {
       max-width: 480px;
   }
 
+  // VISIBILIDAD DE LOGOS
+  #logo-desktop{
+    display:none;
+    visibility: hidden;
+  }
+
+  #logo-mobile {
+    display:block;
+    visibility: visible;
+  }
+
+  // VISIBILIDAD DE NAVEGACION
+  #navegacion-desktop {
+    display: none;
+    visibility: hidden;
+  }
+  #navegacion-mobile {
+    display: block;
+    visibility: visible;
+  }
+
+  // VISIBILIDAD DE CINTILLO
+  #cintillo-desktop {
+    display:none;
+    visibility: hidden;
+  }
+
+  #cintillo-mobile {
+    display:table;
+    visibility: visible;
+  }
+
   //HEADER MOBILE
    header {
 
 
-     #cintillo {
+     #cintillo-mobile {
        height:160px;
      }
      #cintillo-left{
@@ -258,11 +319,10 @@ footer {
         -ms-overflow-style: -ms-autohiding-scrollbar;
       }
 
-        #navegacion {
+        #navegacion-desktop,#navegacion-mobile {
           height:80px;
           padding:0.8em 0em 0;
           margin:0;
-          display:block;
 
               // Configuración horizontal del grid para el menú de compra online para evitar que se amontonen y el overflow sea efectivo
           [class*="col-"] {
