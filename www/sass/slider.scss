@@ -10,17 +10,20 @@ $break-dt: 1920px;
   #slider {
     clear:both;
     float:left;
-    line-height: 2.6em;
+    line-height: 1em;
   }
 
   #slider-responsive{
     bottom:0;
   }
 
+
+
     // RESPONSIVE DESKTOP
 @media screen and (min-width: $break-mb) and (max-width: $break-dt)
 
 {
+
   #menu-slider-indice {
     position:absolute;
     width: 100%;
@@ -96,7 +99,7 @@ $break-dt: 1920px;
             font-size: $fontsize-slider-links;
           }
           .img-detalle {
-            padding: 1em 0 0;
+            padding:2em 0;
           }
 
           a {
@@ -131,7 +134,7 @@ $break-dt: 1920px;
     font-weight: 400;
     color: #ffffff;
     margin:0.7em 0;
-    padding:1.2em;
+    padding:1em;
     display:inline-block;
     height: 60px;
     width: 170px;
@@ -192,7 +195,7 @@ $break-dt: 1920px;
 {
 
   .contenedor-simple {
-    overflow: hidden;
+    overflow:hidden;
     position: relative;
     max-width: 480px;
     margin: auto;
@@ -207,7 +210,6 @@ $break-dt: 1920px;
     .contenido {
       margin:auto;
       position: absolute;
-      width:100%;
       top:30%;
       left:50%;
       transform: translate( -50%, -50% );
@@ -242,8 +244,6 @@ $break-dt: 1920px;
       .titulo-mb {
 
         h2 {
-          margin:auto;
-          padding: 2em 0 0 0;
           font-size: $fontsize-slider-title;
         }
 

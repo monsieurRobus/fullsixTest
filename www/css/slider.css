@@ -1,7 +1,7 @@
 #slider {
   clear: both;
   float: left;
-  line-height: 2.6em; }
+  line-height: 1em; }
 
 #slider-responsive {
   bottom: 0; }
@@ -66,7 +66,7 @@
       padding: 0.7em 0 0;
       font-size: 18px; }
     .titular .img-detalle {
-      padding: 1em 0 0; }
+      padding: 2em 0; }
     .titular a {
       color: #f2f2f2;
       text-decoration: none;
@@ -93,7 +93,7 @@
     font-weight: 400;
     color: #ffffff;
     margin: 0.7em 0;
-    padding: 1.2em;
+    padding: 1em;
     display: inline-block;
     height: 60px;
     width: 170px;
@@ -141,7 +141,6 @@
     .contenedor-simple .contenido {
       margin: auto;
       position: absolute;
-      width: 100%;
       top: 30%;
       left: 50%;
       transform: translate(-50%, -50%);
@@ -168,8 +167,6 @@
       .contenedor-simple .contenido span {
         padding: 0 0 1em 0; }
       .contenedor-simple .contenido .titulo-mb h2 {
-        margin: auto;
-        padding: 2em 0 0 0;
         font-size: 40px; }
       .contenedor-simple .contenido .titulo-mb span {
         font-size: 18px; }
