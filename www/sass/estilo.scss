@@ -142,13 +142,13 @@ main {
 #destacados{
 
   margin:auto;
-  padding: 2em 2em;
+  padding: 2em 1em;
   width:100%;
 
     .destacado{
         margin:auto;
         float:left;
-        padding:1em;
+        padding: 0 0 2em 0;
           img{
             width: 100%;
           }
@@ -321,12 +321,8 @@ footer {
 
         }
       }
-      // MAIN MOBILE
-      main {
-        #destacados {
-          display: inherit;
-            }
-      }
+
+
 }
 
 footer {
@@ -353,22 +349,3 @@ footer {
 .container {
   width:100%;
 }
-
-
-
-// PRUEBAS
-// h1 {
-//   color: #aaffee;
-//   @media screen and (max-width: $break-lg)
-//   {
-//     background: #ffff23;
-//   }
-//   @media screen and (max-width: $break-md)
-//   {
-//     background: #ffaa00;
-//   }
-//   @media screen and (max-width: $break-sm)
-//   {
-//     background: #ff3aFF;
-//   }
-//}

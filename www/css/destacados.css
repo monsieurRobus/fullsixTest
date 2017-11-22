@@ -1,18 +1,17 @@
 @media screen and (max-width: 480px) {
+  .contenedor {
+    position: relative; }
+
   .text-over {
+    margin: auto;
+    position: absolute;
+    bottom: 1.60em;
+    padding: 10% 0;
     background: rgba(70, 200, 70, 0.6);
     color: #f2f2f2;
-    width: 100%;
-    font-size: 24px; }
-
-  .contenido {
-    position: absolute;
-    text-align: center;
-    bottom: 0;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    color: #f2f2f2;
-    padding: 20px;
-    /* Some padding */ } }
+    font-size: 24px;
+    text-align: center; }
+    .text-over div {
+      top: 40%; } }
 
 /*# sourceMappingURL=destacados.css.map */

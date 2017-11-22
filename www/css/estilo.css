@@ -109,12 +109,12 @@ body {
         display: block; }
   body main #destacados {
     margin: auto;
-    padding: 2em 2em;
+    padding: 2em 1em;
     width: 100%; }
     body main #destacados .destacado {
       margin: auto;
       float: left;
-      padding: 1em; }
+      padding: 0 0 2em 0; }
       body main #destacados .destacado img {
         width: 100%; }
   body footer {
@@ -211,10 +211,7 @@ body {
       vertical-align: middle;
       display: inline-block; }
     header #navegacion .titulo-nav {
-      display: none; }
-
-  main #destacados {
-    display: inherit; } }
+      display: none; } }
 footer {
   width: inherit;
   text-align: center;
