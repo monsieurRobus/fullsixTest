@@ -1,6 +1,7 @@
 // CARGA DE VARIABLES
 // VARIABLES RESPONSIVE
 $break-mb: 480px;
+$break-mb2: 481px;
 $break-dt: 1920px;
 
 // VARIABLES FUENTES
@@ -162,7 +163,7 @@ footer {
 }
 
 // RESPONSIVE DESKTOP
-@media screen and (min-width: $break-mb) and(max-width: $break-dt){
+@media screen and (min-width: $break-mb2) and(max-width: $break-dt){
 
   body {
     max-width: 1280px;

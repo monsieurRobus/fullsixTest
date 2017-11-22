@@ -1,13 +1,14 @@
 // CARGA DE VARIABLES
 // VARIABLES RESPONSIVE
 $break-mb: 480px;
+$break-mb2: 481px;
 $break-dt: 1920px;
 
 // VARIABLES FUENTES
 @import "tamaniofuentes";
 
 
-@media screen and (min-width: $break-mb) and (max-width: $break-dt){
+@media screen and (min-width: $break-mb2) and (max-width: $break-dt){
 
 }
 @media screen and (max-width: $break-mb){

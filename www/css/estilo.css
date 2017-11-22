@@ -119,7 +119,7 @@ body {
         width: 100%; }
   body footer {
     clear: both; }
-  @media screen and (min-width: 480px) and (max-width: 1920px) {
+  @media screen and (min-width: 481px) and (max-width: 1920px) {
     body body {
       max-width: 1280px; }
     body header #navegacion {
