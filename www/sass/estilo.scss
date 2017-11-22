@@ -102,6 +102,7 @@ header {
   padding: 0;
 
   #navegacion {
+
     border-top: 1px solid black;
     }
   }
@@ -170,6 +171,8 @@ footer {
   // HEADER DESKTOP
   header {
     #navegacion {
+      float:left;
+      clear:both;
       padding:1em 0 1em;
 
       .titulo-nav {

@@ -123,6 +123,8 @@ body {
     body body {
       max-width: 1280px; }
     body header #navegacion {
+      float: left;
+      clear: both;
       padding: 1em 0 1em; }
       body header #navegacion .titulo-nav {
         padding: 1em 0 1em 1.3em; }

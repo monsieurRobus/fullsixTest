@@ -17,13 +17,10 @@ $break-dt: 1920px;
     bottom:0;
   }
 
-
-
     // RESPONSIVE DESKTOP
 @media screen and (min-width: $break-mb) and (max-width: $break-dt)
 
 {
-
   #menu-slider-indice {
     position:absolute;
     width: 100%;
@@ -195,7 +192,7 @@ $break-dt: 1920px;
 {
 
   .contenedor-simple {
-    overflow:hidden;
+    overflow: hidden;
     position: relative;
     max-width: 480px;
     margin: auto;
@@ -210,6 +207,7 @@ $break-dt: 1920px;
     .contenido {
       margin:auto;
       position: absolute;
+      width:100%;
       top:30%;
       left:50%;
       transform: translate( -50%, -50% );
@@ -244,6 +242,7 @@ $break-dt: 1920px;
       .titulo-mb {
 
         h2 {
+          margin:auto;
           padding: 2em 0 0 0;
           font-size: $fontsize-slider-title;
         }
