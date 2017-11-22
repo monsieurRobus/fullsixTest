@@ -15,7 +15,6 @@ $break-dt: 1920px;
     .destacado{
         margin:auto;
         float:left;
-        padding:1em;
           img{
             width: 100%;
           }
@@ -32,9 +31,14 @@ $break-dt: 1920px;
   #destacados-mobile {
     visibility: hidden;
     display: none;
-  }
+}
+
+.destacado {
+  padding: 1em;
+}
 
 }
+
 @media screen and (max-width: $break-mb){
 
   #destacados-desktop {
@@ -56,8 +60,6 @@ $break-dt: 1920px;
 
   }
 
-  
-
   .contenedor {
     position:relative;
   }
@@ -66,8 +68,8 @@ $break-dt: 1920px;
     margin:auto;
     position: absolute;
     left:-5px;
-    bottom: 22px;
-    padding: 15% 0;
+    bottom: 5px;
+    padding: 10% 0;
     background: rgba(70,200,70,0.6);
     color:#f2f2f2;
     font-size: $fontsize-destacados-detalle;
