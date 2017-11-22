@@ -192,11 +192,11 @@
 
   #slide01mob {
     position: relative;
-    margin: 2em 0 1em 0; }
+    margin: 0 0 1em 0; }
     #slide01mob h2, #slide01mob span {
       text-align: left; }
     #slide01mob .contenido {
-      margin: 2em 0 0 0; }
+      margin: 0 0 0 0; }
     #slide01mob .titulo-mb h2 {
       padding: 1em 0 0 0;
       font-size: 40px; }

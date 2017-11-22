@@ -1,17 +1,42 @@
+#destacados-desktop, #destacados-mobile {
+  margin: auto;
+  padding: 2em 1em; }
+  #destacados-desktop .destacado, #destacados-mobile .destacado {
+    margin: auto;
+    float: left;
+    padding: 1em; }
+    #destacados-desktop .destacado img, #destacados-mobile .destacado img {
+      width: 100%; }
+
+@media screen and (min-width: 481px) and (max-width: 1920px) {
+  #destacados-desktop {
+    visibility: visible;
+    display: block; }
+
+  #destacados-mobile {
+    visibility: hidden;
+    display: none; } }
 @media screen and (max-width: 480px) {
+  #destacados-desktop {
+    visibility: hidden;
+    display: none; }
+
+  #destacados-mobile {
+    visibility: visible;
+    display: block; }
+
   .contenedor {
     position: relative; }
 
   .text-over {
     margin: auto;
     position: absolute;
-    bottom: 1.60em;
-    padding: 10% 0;
+    left: -5px;
+    bottom: 22px;
+    padding: 15% 0;
     background: rgba(70, 200, 70, 0.6);
     color: #f2f2f2;
     font-size: 24px;
-    text-align: center; }
-    .text-over div {
-      top: 40%; } }
+    text-align: center; } }
 
 /*# sourceMappingURL=destacados.css.map */
