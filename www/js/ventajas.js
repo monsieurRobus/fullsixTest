@@ -56,7 +56,7 @@ $(document).scroll(function(){
 $(flotante).click(function(){
       $(flotante).fadeOut("slow");
       $(ventajasDesktop).fadeOut("slow");
-      $(ventajasMobile).css({display:"block",visibility:"visible"}).fadeIn("slow");
+      $(ventajasMobile).fadeIn("slow").css({display:"block",visibility:"visible"});
     }
 );
 
