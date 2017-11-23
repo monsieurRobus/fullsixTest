@@ -24,8 +24,8 @@ $(document).scroll(function(){
 
   var y = $(this).scrollTop();
   var alturaTotal = document.body.scrollHeight;
-  var marca1=alturaTotal*4/9;                   // Marca 1 fade in // slideIn
-  var marca2=alturaTotal*5/9;                   // Marca 2 fade in // slideIn
+  var marca1=alturaTotal*3.5/9;                   // Marca 1 fade in // slideIn
+  var marca2=alturaTotal*4.5/9;                   // Marca 2 fade in // slideIn
   var anclaIzquierda=-100;
   var opacidad=0;
   var offset=0;

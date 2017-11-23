@@ -112,7 +112,6 @@
   .active, .menu-elemento:hover {
     background-color: #717171; }
 
-  /* Fading animation */
   .fade {
     -webkit-animation-name: fade;
     -webkit-animation-duration: 1.5s;
@@ -164,11 +163,8 @@
       left: 50%;
       transform: translate(-50%, -50%);
       color: #f1f1f1;
-      /* Grey text */
       width: 100%;
-      /* Full width */
-      padding: 20px;
-      /* Some padding */ }
+      padding: 20px; }
       .contenedor-simple .contenido a {
         color: #f2f2f2;
         text-decoration: none;

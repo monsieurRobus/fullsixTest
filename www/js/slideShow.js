@@ -9,7 +9,7 @@ function temporizador(){
     titularIndex++;
     mostrarTitular();
   }
-    ,2000);
+    ,8000);
 
 }
 
