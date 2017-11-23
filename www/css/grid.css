@@ -1,7 +1,7 @@
 .row {
   width: 100%;
   clear: both;
-  display: table; }
+  display: flex; }
 
 .col-1 {
   width: 8.33%; }

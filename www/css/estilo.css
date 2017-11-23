@@ -61,7 +61,8 @@ body {
         width: inherit;
         display: block; }
   body footer {
-    clear: both; }
+    clear: both;
+    margin: auto; }
   @media screen and (min-width: 481px) and (max-width: 1920px) {
     body body {
       max-width: 1280px; }

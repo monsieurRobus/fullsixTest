@@ -1,31 +1,127 @@
+#flotante {
+  position: absolute;
+  left: 100px;
+  width: 8em;
+  height: 4em;
+  clear: both;
+  float: left; }
+  #flotante img {
+    width: 100%; }
+
+.separador {
+  padding: 2em 0; }
+
 @media screen and (min-width: 481px) and (max-width: 1920px) {
-  #ventakas-desktop {
-    display: block;
-    visibility: visible; }
+  #ventajas01 {
+    top: 100px; }
+
+  h2 {
+    margin: 0; }
+
+  #ventajas-desktop, #ventajas-flotante {
+    padding: 1em 0 1em;
+    margin: auto; }
+    #ventajas-desktop #ventajas01, #ventajas-desktop #ventajas02, #ventajas-flotante #ventajas01, #ventajas-flotante #ventajas02 {
+      text-align: center;
+      height: 17em; }
+      #ventajas-desktop #ventajas01 h2, #ventajas-desktop #ventajas02 h2, #ventajas-flotante #ventajas01 h2, #ventajas-flotante #ventajas02 h2 {
+        text-align: left;
+        font-size: 18px;
+        color: #f2f2f2;
+        padding: 0 0 0 0.7em; }
+      #ventajas-desktop #ventajas01 span, #ventajas-desktop #ventajas02 span, #ventajas-flotante #ventajas01 span, #ventajas-flotante #ventajas02 span {
+        display: block;
+        padding: 1em 1em;
+        margin: 0;
+        font-size: 15px;
+        color: #f2f2f2; }
+      #ventajas-desktop #ventajas01 #ventajas-accion, #ventajas-desktop #ventajas01 #ventajas-accion-flotante, #ventajas-desktop #ventajas02 #ventajas-accion, #ventajas-desktop #ventajas02 #ventajas-accion-flotante, #ventajas-flotante #ventajas01 #ventajas-accion, #ventajas-flotante #ventajas01 #ventajas-accion-flotante, #ventajas-flotante #ventajas02 #ventajas-accion, #ventajas-flotante #ventajas02 #ventajas-accion-flotante {
+        text-align: center;
+        background: #ffffff;
+        height: 10%;
+        width: 80%;
+        font-size: 15px;
+        font-weight: 200;
+        margin: 1em auto 0 auto; }
+      #ventajas-desktop #ventajas01 #ventajas-accion::after, #ventajas-desktop #ventajas01 #ventajas-accion-flotante::after, #ventajas-desktop #ventajas02 #ventajas-accion::after, #ventajas-desktop #ventajas02 #ventajas-accion-flotante::after, #ventajas-flotante #ventajas01 #ventajas-accion::after, #ventajas-flotante #ventajas01 #ventajas-accion-flotante::after, #ventajas-flotante #ventajas02 #ventajas-accion::after, #ventajas-flotante #ventajas02 #ventajas-accion-flotante::after {
+        margin: 0 0 0 10px;
+        color: #f2f2f2;
+        content: url("./../img/desktop/cintillo/flecha.png");
+        position: absolute;
+        border-bottom: 0; }
+      #ventajas-desktop #ventajas01 #ventajas-registro, #ventajas-desktop #ventajas01 #ventajas-registro-flotante, #ventajas-desktop #ventajas02 #ventajas-registro, #ventajas-desktop #ventajas02 #ventajas-registro-flotante, #ventajas-flotante #ventajas01 #ventajas-registro, #ventajas-flotante #ventajas01 #ventajas-registro-flotante, #ventajas-flotante #ventajas02 #ventajas-registro, #ventajas-flotante #ventajas02 #ventajas-registro-flotante {
+        display: inline-block;
+        vertical-align: middle;
+        background: #393D49; }
+        #ventajas-desktop #ventajas01 #ventajas-registro .tarjeta-registro, #ventajas-desktop #ventajas01 #ventajas-registro-flotante .tarjeta-registro, #ventajas-desktop #ventajas02 #ventajas-registro .tarjeta-registro, #ventajas-desktop #ventajas02 #ventajas-registro-flotante .tarjeta-registro, #ventajas-flotante #ventajas01 #ventajas-registro .tarjeta-registro, #ventajas-flotante #ventajas01 #ventajas-registro-flotante .tarjeta-registro, #ventajas-flotante #ventajas02 #ventajas-registro .tarjeta-registro, #ventajas-flotante #ventajas02 #ventajas-registro-flotante .tarjeta-registro {
+          position: fixed;
+          top: 0;
+          left: 0; }
+      #ventajas-desktop #ventajas01 #ventajas-promociones, #ventajas-desktop #ventajas01 #ventajas-promociones-flotante, #ventajas-desktop #ventajas02 #ventajas-promociones, #ventajas-desktop #ventajas02 #ventajas-promociones-flotante, #ventajas-flotante #ventajas01 #ventajas-promociones, #ventajas-flotante #ventajas01 #ventajas-promociones-flotante, #ventajas-flotante #ventajas02 #ventajas-promociones, #ventajas-flotante #ventajas02 #ventajas-promociones-flotante {
+        display: inline-block;
+        vertical-align: middle;
+        background: #DB1720; }
+      #ventajas-desktop #ventajas01 #ventajas-vales, #ventajas-desktop #ventajas01 #ventajas-vales-flotante, #ventajas-desktop #ventajas02 #ventajas-vales, #ventajas-desktop #ventajas02 #ventajas-vales-flotante, #ventajas-flotante #ventajas01 #ventajas-vales, #ventajas-flotante #ventajas01 #ventajas-vales-flotante, #ventajas-flotante #ventajas02 #ventajas-vales, #ventajas-flotante #ventajas02 #ventajas-vales-flotante {
+        display: inline-block;
+        vertical-align: middle;
+        background: #C80C22; }
+      #ventajas-desktop #ventajas01 #ventajas-bolsillo, #ventajas-desktop #ventajas01 #ventajas-bolsillo-flotante, #ventajas-desktop #ventajas02 #ventajas-bolsillo, #ventajas-desktop #ventajas02 #ventajas-bolsillo-flotante, #ventajas-flotante #ventajas01 #ventajas-bolsillo, #ventajas-flotante #ventajas01 #ventajas-bolsillo-flotante, #ventajas-flotante #ventajas02 #ventajas-bolsillo, #ventajas-flotante #ventajas02 #ventajas-bolsillo-flotante {
+        display: inline-block;
+        vertical-align: middle;
+        background: #D82322; }
+      #ventajas-desktop #ventajas01 #ventajas-escuchamos, #ventajas-desktop #ventajas01 #ventajas-escuchamos-flotante, #ventajas-desktop #ventajas02 #ventajas-escuchamos, #ventajas-desktop #ventajas02 #ventajas-escuchamos-flotante, #ventajas-flotante #ventajas01 #ventajas-escuchamos, #ventajas-flotante #ventajas01 #ventajas-escuchamos-flotante, #ventajas-flotante #ventajas02 #ventajas-escuchamos, #ventajas-flotante #ventajas02 #ventajas-escuchamos-flotante {
+        display: inline-block;
+        vertical-align: middle;
+        background: #E43227; }
+      #ventajas-desktop #ventajas01 #ventajas-regalos, #ventajas-desktop #ventajas01 #ventajas-regalos-flotante, #ventajas-desktop #ventajas02 #ventajas-regalos, #ventajas-desktop #ventajas02 #ventajas-regalos-flotante, #ventajas-flotante #ventajas01 #ventajas-regalos, #ventajas-flotante #ventajas01 #ventajas-regalos-flotante, #ventajas-flotante #ventajas02 #ventajas-regalos, #ventajas-flotante #ventajas02 #ventajas-regalos-flotante {
+        display: inline-block;
+        vertical-align: middle;
+        background: #E02019; }
+      #ventajas-desktop #ventajas01 [id*="ventajas-"], #ventajas-desktop #ventajas02 [id*="ventajas-"], #ventajas-flotante #ventajas01 [id*="ventajas-"], #ventajas-flotante #ventajas02 [id*="ventajas-"] {
+        padding: 2em 0; }
 
   #ventajas-mobile {
     display: none;
     visibility: hidden; }
 
   #ventajas-desktop, #ventajas-mobile {
-    visibility: hidden;
+    opacity: 0;
     position: relative;
-    padding: 2em;
-    clear: both;
-    float: left;
-    height: 25em;
-    width: 100%; }
+    height: 196px;
+    width: 100%;
+    box-sizing: border-box;
+    clear: both; }
+    #ventajas-desktop [class*="col-"], #ventajas-mobile [class*="col-"] {
+      text-align: center; }
 
   .ventajas {
-    position: absolute;
+    clear: both;
+    float: left;
     margin: 0 auto 0 auto;
+    padding: 2em;
+    bottom: 2em;
     top: 1em;
     right: 0;
-    left: 0;
-    bottom: 1em;
-    background: #FF0000;
-    width: 90%;
-    height: 90%; } }
+    left: 8.125%;
+    width: 100%;
+    height: 100%; }
+
+  #ventajas-flotante {
+    display: none;
+    visibility: hidden;
+    position: fixed;
+    bottom: 10em;
+    margin: auto;
+    width: 1280px; }
+    #ventajas-flotante .ventajas {
+      padding: 0;
+      height: 20em; }
+      #ventajas-flotante .ventajas #ventajas-cerrar {
+        color: #f2f2f2;
+        text-align: left;
+        padding: 0.4em; }
+      #ventajas-flotante .ventajas #ventajas-registro-flotante {
+        padding: 0.4em; } }
 @media screen and (max-width: 480px) {
   #ventakas-desktop {
     display: none;
