@@ -155,7 +155,8 @@
     top: 13em;
     left: 1em;
     padding: 0.6em;
-    width: 50%; }
+    width: 50%;
+    margin: 0 0 1em 0; }
 
   #destacado-ventajas-accion::after {
     margin: 0 0 0 10px;

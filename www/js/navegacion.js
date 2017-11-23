@@ -7,47 +7,73 @@
 
 // En este caso lo acemos desde el 85% al final.
 
-var navegacion = $("navegacion-mobile");
+var navegacion = document.getElementById("navegacion-mobile");
+var anchoVentanaVista = $(window).width();
+var flechaIzq = document.getElementById("menu-flecha-izq");
+var flechaDer = document.getElementById("menu-flecha-der");
+var opacidadIzq = 0;
+var opacidadDer = 1;
+// Aplicamos opacidad inicial
+$(flechaIzq).css({opacity:opacidadIzq});
+$(flechaDer).css({opacity:opacidadDer});
 
-$(document).scroll(function(){
+$(navegacion).scroll(function(){
 
-  var y = $(this).scrollLeft();
-  var anchura = navegacion.body.scrollWidth;
-  var marca1=alturaTotal*2/9;                   // Marca 1 fade in // slideIn
-  var marca2=alturaTotal*3/9;                   // Marca 2 fade in // slideIn
-  var anclaIzquierda=-100;
-  var opacidad=0;
-  var offset=0;
-  var offsetTarjeta=0;
+  var x =  $(this).scrollLeft();
+  var anchura = navegacion.scrollWidth;
+  var marca1=anchoVentanaVista*2/9;                   // Marca 1 fade in // slideIn
+  var marca2=anchoVentanaVista*3/9;
+  var marca3=anchoVentanaVista*4/9;                   // Marca 1 fade in // slideIn
+  var marca4=anchoVentanaVista*5/9;
 
-  if(y>marca1)
+// EXTREMO IZQ
+  if(x>marca1)
   {
-    posicionTarjetaY=posicionVentajas+"px";
-    if(y>marca2)
+    if(x>marca2)
     {
-      opacidad=1;
-      offset="0px";
-      offsetTarjeta=posicionTarjetaX+"px";
+      // cuando llega a la segunda marca
+      opacidadIzq=1;
+      opacidadDer=1;
+
     }
     else
     {
-        opacidad=1-(marca2-y)/(marca2-marca1);
-        offset=(1-opacidad)*(anclaIzquierda)+"px";
-        offsetTarjeta=posicionTarjetaX+(1-opacidad)*(anclaIzquierda)+"px";
+      // entre la primera y la segunda marca
+      opacidadIzq = (1-(marca2-x)/(marca2-marca1));
+
+
     }
 
   }
   else {
+    // antes de llegar a la primera marca
+    opacidadIzq=0;
+    opacidadDer=1;
+  }
 
-    posicionTarjetaY=$(this).scrollTop()+$(window).innerHeight()*8/9;
-    opacidad=0;
-    offset=anclaIzquierda+"px";
-    offsetTarjeta=posicionTarjetaX+"px";
+
+// EXTREMO DERECHO
+  if(x>marca3)
+  {
+    // Codigo cuando llega a la tercera marca
+    if(x>marca4)
+    {
+      // cuando llega a la cuarta marca
+      opacidadIzq=1;
+      opacidadDer=0;
+
+    }
+    else
+    {
+      // entre la tercera y la cuarta marca
+      opacidadDer = (marca4-x)/(marca4-marca3);
+
+    }
 
   }
 
-  // Aplicamos los estilos calculados
-  $(ventajasDesktop).css({opacity:opacidad,left:offset});
-  $(flotante).css({opacity:(1-opacidad),top:posicionTarjetaY});
 
+  // // Aplicamos los estilos calculados
+  $(flechaIzq).css({opacity:opacidadIzq});
+  $(flechaDer).css({opacity:opacidadDer});
 });

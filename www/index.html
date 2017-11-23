@@ -38,6 +38,7 @@
         </nav>
         <nav id="navegacion-mobile" class="scroll">
               <span class="col-3 titulo-nav"><span>Compra online</span></span>
+              <span id="menu-flecha-izq" class="flechaIzq">&lt;</span>
               <span id="super" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon1.png" /></span>
               <span id="electronica" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon2.png" /></span>
               <span id="electro-hogar" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon3.png" /></span>
@@ -46,9 +47,8 @@
               <span id="movil" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon6.png" /></span>
               <span id="viajes" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon7.png" /></span>
               <span id="seguros" class="col-1 icono"><img src="./img/desktop/iconos-compra-online/icon8.png" /></span>
-              <span id="menu-flecha" class="flecha"><img alt="Flecha Menu" src="./img/desktop/cintillo/flecha.png"></span>
+              <span id="menu-flecha-der" class="flechaDer">&gt;</span>
         </nav>
-      </div>
         <div id="slider" class="contenedor row">
           <!-- SECCION SLIDER DESKTOP -->
               <div id="slider-responsive-desktop">
@@ -283,8 +283,8 @@
 
         var anchoDesktop = 480;   // Ancho a partir del cual cambiamos de mobile a Desktop
         var anchoVentana = window.innerWidth;
-
-
+        var animacionSLider = null;
+        var titularIndex = 1;
         // Una vez el documento esté preparado, procedemos a realizar la carga de página correspondiente.
         var setupInicial = function(){
 
@@ -292,25 +292,9 @@
           if (anchoVentana >= anchoDesktop) {
 
             // INICIO DEL slideShow
-            var titularIndex = 0;
-            mostrarTitular();
+            mostrarTitular();   // Mostramos el primer titular
+            temporizador();     // lanzamos la programación del temporizador
 
-            function mostrarTitular() {
-                var i;
-                var titulares = document.getElementsByClassName("titular");
-                var elementos = document.getElementsByClassName("menu-elemento")
-                for (i = 0; i < titulares.length; i++) {
-                    titulares[i].style.display = "none";
-                }
-                for (i = 0; i < elementos.length; i++) {
-                    elementos[i].className = elementos[i].className.replace(" active", "");
-                }
-                titularIndex++;
-                if (titularIndex > titulares.length) {titularIndex = 1}
-                titulares[titularIndex-1].style.display = "flex";
-                elementos[titularIndex-1].className += " active";
-                setTimeout(mostrarTitular, 10000); // Cambiamos de imagen automáticamente cada 2 segundos
-            }
           }
         };
 
@@ -320,5 +304,6 @@
       <script src="js/slideShow.js" type="text/javascript"></script>
       <script src="js/resizeIconos.js" type="text/javascript"></script>
       <script src="js/ventajas.js" type="text/javascript"></script>
+      <script src="js/navegacion.js" type="text/javascript"></script>
   </body>
 </html>

@@ -202,13 +202,25 @@ body {
       display: inline-block; }
     header #navegacion-desktop .titulo-nav, header #navegacion-mobile .titulo-nav {
       display: none; }
-    header #navegacion-desktop .flecha, header #navegacion-mobile .flecha {
+    header #navegacion-desktop .flechaDer, header #navegacion-mobile .flechaDer {
       background: rgba(200, 200, 200, 0.5);
       display: inline-block;
-      padding: 2em 1em;
-      position: fixed;
+      padding: 2em 0.4em;
+      position: absolute;
       right: 0px;
-      top: 65px;
+      height: 80px;
+      top: 62px;
+      width: 23px;
+      margin: auto; }
+    header #navegacion-desktop .flechaIzq, header #navegacion-mobile .flechaIzq {
+      background: rgba(200, 200, 200, 0.5);
+      display: inline-block;
+      padding: 2em 0.4em;
+      position: absolute;
+      left: 0px;
+      width: 23px;
+      height: 80px;
+      top: 62px;
       margin: auto; } }
 footer {
   width: inherit;

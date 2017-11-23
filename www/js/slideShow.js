@@ -1,16 +1,45 @@
-var titularIndex = 1;
-mostrarTitular(titularIndex);
+
+
+
+// Temporizador que programa  el movimiento del slider
+function temporizador(){
+  console.log(titularIndex);
+  animacionSlider= setInterval(function(){
+
+    titularIndex++;
+    mostrarTitular();
+  }
+    ,2000);
+
+}
 
 function sumarIndex(n) {
-  mostrarTitular(titularIndex += n);
+  titularIndex+=n;
+  mostrarTitular();
+
+  // Reseteamos el temporizador
+  if(animacionSlider){
+    clearTimeout(animacionSlider);
+    animacionSlider=null;
+  }
+  temporizador();
 }
 
 function titularActual(n) {
   mostrarTitular(titularIndex = n);
+  // Reseteamos el temporizador
+  if(animacionSlider){
+    clearTimeout(animacionSlider);
+    animacionSlider=null;
+  }
+  temporizador();
 }
 
-function mostrarTitular(n) {
+function mostrarTitular() {
+
+
   var i;
+  n=titularIndex;
   var titulares = document.getElementsByClassName("titular");
   var elementos = document.getElementsByClassName("menu-elemento");
   if (n > titulares.length) {titularIndex = 1}
@@ -22,7 +51,10 @@ function mostrarTitular(n) {
   for (i = 0; i < elementos.length; i++) {
       elementos[i].className = elementos[i].className.replace(" active", "");
   }
+
+  if (titularIndex > titulares.length) {titularIndex = 1}
     titulares[titularIndex-1].style.display = "flex";
     elementos[titularIndex-1].className += " active";
+
 
 }

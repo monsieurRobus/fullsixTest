@@ -24,8 +24,8 @@ $(document).scroll(function(){
 
   var y = $(this).scrollTop();
   var alturaTotal = document.body.scrollHeight;
-  var marca1=alturaTotal*2/9;                   // Marca 1 fade in // slideIn
-  var marca2=alturaTotal*3/9;                   // Marca 2 fade in // slideIn
+  var marca1=alturaTotal*4/9;                   // Marca 1 fade in // slideIn
+  var marca2=alturaTotal*5/9;                   // Marca 2 fade in // slideIn
   var anclaIzquierda=-100;
   var opacidad=0;
   var offset=0;
@@ -50,7 +50,7 @@ $(document).scroll(function(){
   }
   else {
 
-    posicionTarjetaY=$(this).scrollTop()+$(window).innerHeight()*8/9;
+    posicionTarjetaY=$(this).scrollTop()+$(window).innerHeight()*7/9;
     opacidad=0;
     offset=anclaIzquierda+"px";
     offsetTarjeta=posicionTarjetaX+"px";
