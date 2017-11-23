@@ -39,7 +39,7 @@ body {
   margin:auto;
   font-family: AvantGardeStd;
   max-width: 1280px;
-  
+
 h1 {
   display:none;
   visibility: hidden;
@@ -336,6 +336,16 @@ footer {
             display: none;  // OCULTAMOS el titulo "compra online"
             }
 
+          .flecha{
+            background: rgba(200,200,200,0.5);
+            display:inline-block;
+            padding:2em 1em;
+            position:fixed;
+            right:0px;
+            top:65px;
+            margin:auto;
+
+          }
         }
       }
 

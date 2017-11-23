@@ -201,7 +201,15 @@ body {
       vertical-align: middle;
       display: inline-block; }
     header #navegacion-desktop .titulo-nav, header #navegacion-mobile .titulo-nav {
-      display: none; } }
+      display: none; }
+    header #navegacion-desktop .flecha, header #navegacion-mobile .flecha {
+      background: rgba(200, 200, 200, 0.5);
+      display: inline-block;
+      padding: 2em 1em;
+      position: fixed;
+      right: 0px;
+      top: 65px;
+      margin: auto; } }
 footer {
   width: inherit;
   text-align: center;
