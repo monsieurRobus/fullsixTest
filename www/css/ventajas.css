@@ -123,7 +123,7 @@
       #ventajas-flotante .ventajas #ventajas-registro-flotante {
         padding: 0.4em; } }
 @media screen and (max-width: 480px) {
-  #ventakas-desktop {
+  #ventajas-desktop, #ventajas-flotante, #flotante {
     display: none;
     visibility: hidden; }
 
@@ -133,6 +133,34 @@
 
   .ventajas {
     position: absolute;
-    background: #FF0000; } }
+    background: #FF0000; }
+
+  #destacado-ventajas {
+    width: 100%;
+    margin: 0 auto 4em auto;
+    background: #393D49;
+    color: #f2f2f2;
+    position: relative;
+    padding: 0 0 4em 1em; }
+    #destacado-ventajas h2 {
+      text-align: left;
+      font-weight: 200;
+      font-size: 34px; }
+
+  #destacado-ventajas-accion {
+    position: absolute;
+    background: #f2f2f2;
+    color: #000000;
+    width: 100%;
+    top: 13em;
+    left: 1em;
+    padding: 0.6em;
+    width: 50%; }
+
+  #destacado-ventajas-accion::after {
+    margin: 0 0 0 10px;
+    color: #f2f2f2;
+    content: url("./../img/desktop/cintillo/flecha.png");
+    border-bottom: 0; } }
 
 /*# sourceMappingURL=ventajas.css.map */

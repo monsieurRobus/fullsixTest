@@ -179,8 +179,16 @@
               </div>
             </div>
           </div>
+          <div id="destacado3" class="destacado contenedor col-12">
+            <h2>Tus ventajas EROSKI club</h2>
+            <div id="destacado-ventajas" class="col-2">
+              <h2>REGISTRA TU TARJETA Y TENDRÁS MAS VENTAJAS</h2>
+              <div id="destacado-ventajas-accion">
+                ¡Las quiero!
+              </div>
+            </div>
+          </div>
         </section>
-
         <section id="ventajas-desktop">
           <h2 class="separador">Tus ventajas EROSKI club</h2>
           <!-- VENTAJAS DESKTOP -->
@@ -278,7 +286,6 @@
         // Una vez el documento esté preparado, procedemos a realizar la carga de página correspondiente.
         var setupInicial = function(){
 
-
           // 1. Desktop
           if (anchoVentana >= anchoDesktop) {
 
@@ -300,7 +307,7 @@
                 if (titularIndex > titulares.length) {titularIndex = 1}
                 titulares[titularIndex-1].style.display = "flex";
                 elementos[titularIndex-1].className += " active";
-                setTimeout(mostrarTitular, 150000); // Change image every 2 seconds
+                setTimeout(mostrarTitular, 10000); // Cambiamos de imagen automáticamente cada 2 segundos
             }
           }
         };

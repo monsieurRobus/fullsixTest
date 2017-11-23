@@ -7,7 +7,18 @@ var ventajasDesktopVisible = false;
 var posicionTarjetaY=$(window).innerHeight()*7/9;
 var posicionTarjetaX=$("#flotante")[0].offsetLeft;
 var posicionVentajas=$(".ventajas").offsetHeight;
+
 $(flotante).css({top:posicionTarjetaY});
+
+
+// Mediante la siguiente función interpolamos la opacidad del gráfico de la tarjeta
+// de manera que cuando se acerca a la marca 1 es completamente opaca, cuando se
+// acerca a la segunda se va desvanenciendo hasta que al llegar a la marca 2 ha desaparecido,
+// dejando en su lugar el div de ventajas
+
+//  ::::::::::TARJETA VISIBLE::::::::-------------------:::TARJTETA INVISIBLE
+//  0px ----------------------MARCA1-------------------MARCA2--------------|
+//  ::::::::::MENÚ OPACO:::::::::::::++++++++++++++++++:::MENÚ VISIBLE::::::
 
 $(document).scroll(function(){
 

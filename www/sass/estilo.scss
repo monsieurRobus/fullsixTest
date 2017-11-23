@@ -39,8 +39,10 @@ body {
   margin:auto;
   font-family: AvantGardeStd;
   max-width: 1280px;
+  
 h1 {
-
+  display:none;
+  visibility: hidden;
 }
 
 h2 {
@@ -198,10 +200,6 @@ footer {
     #destacados-desktop{
       text-align: center;
     }
-
-    // CSS HOVER EXTRAIDO DE PROYECTO DE EJEMPLO DE W3SCHOOLS, EDITADO para
-    // EL PROYECTO ACTUAL
-    // URL: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_image_overlay_opacity
 
     .imghover {
       padding:0;

@@ -1,9 +1,25 @@
 // DISEÑO DEL GRID DE 12 COLUMNAS
+// VARIABLES RESPONSIVE
+$break-mb: 480px;
+$break-mb2: 481px;
+$break-dt: 1920px;
 
-.row {
-  width:100%;
-  clear:both;
-  display:flex;
+@media screen and (min-width: $break-mb2) and (max-width: $break-dt)
+{
+  .row {
+    width:100%;
+    clear:both;
+    display:flex;
+  }
+}
+
+@media screen and (max-width: $break-mb)
+{
+  .row {
+    width:100%;
+    clear:both;
+  }
+
 }
 
 .col-1 {width: 8.33%;}

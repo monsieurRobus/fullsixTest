@@ -1,8 +1,12 @@
-.row {
-  width: 100%;
-  clear: both;
-  display: flex; }
-
+@media screen and (min-width: 481px) and (max-width: 1920px) {
+  .row {
+    width: 100%;
+    clear: both;
+    display: flex; } }
+@media screen and (max-width: 480px) {
+  .row {
+    width: 100%;
+    clear: both; } }
 .col-1 {
   width: 8.33%; }
 
